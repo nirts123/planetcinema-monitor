@@ -237,7 +237,8 @@ def main():
                     imax_only = meta.get("imax")
                     lines = [f"{rtl(meta['name'])} {ltr(f'({code})')}"]
                     dates_label = "תאריכי IMAX חדשים" if imax_only else "אפשר להזמין (ראשון לציון) מתאריכים חדשים"
-                    lines.append(f"{dates_label}: {ltr(', '.join(display_date(d) for d in newly))}")
+                    date_range = ltr(display_date(newly[0])) if len(newly) == 1 else f"{ltr(display_date(newly[0]))} עד {ltr(display_date(newly[-1]))}"
+                    lines.append(f"{dates_label}: {date_range}")
                     url = film_urls.get(code)
                     if url:
                         link = f"{url}#/buy-tickets-by-film?for-movie={code}&in-cinema={cinema_id}&at={newly[0]}&view-mode=list"
