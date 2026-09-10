@@ -51,6 +51,18 @@ def rtl(s):
     return f"⁧{s}⁩"
 
 
+def ltr(s):
+    """Isolate an LTR (dates/codes/URLs) fragment inside an otherwise-RTL
+    line so Telegram doesn't garble the bidi ordering."""
+    return f"⁦{s}⁩"
+
+
+FEED_LABELS = {
+    "coming-soon": "בקרוב",
+    "now-playing": "כרגע בקולנוע",
+}
+
+
 def display_date(iso_date):
     """'YYYY-MM-DD' (the API/URL format) -> 'DD/MM/YY' for display only."""
     y, m, d = iso_date.split("-")
@@ -158,7 +170,9 @@ def main():
         for code, p in current.items():
             film_urls[code] = p["url"]
             if code not in prev:
-                new_events.append(f"[{feed_name}] NEW: {rtl(p['featureTitle'])} -> {p['url']} (dateStarted={p.get('dateStarted')})")
+                started = p.get("dateStarted")
+                started_str = f" (יציאה: {ltr(display_date(started[:10]))})" if started else ""
+                new_events.append(f"סרט חדש [{FEED_LABELS.get(feed_name, feed_name)}]: {p['featureTitle']}{started_str}\n{ltr(p['url'])}")
         state["feeds"][feed_name] = {code: {"featureTitle": p["featureTitle"], "url": p["url"]} for code, p in current.items()}
 
     # 2. Booking horizon per cinema + watchlist detection (respecting per-film IMAX-only flag)
@@ -185,8 +199,8 @@ def main():
 
         prev_horizon = state["horizon"].get(cinema_id)
         if last_open and last_open != prev_horizon:
-            was = display_date(prev_horizon) if prev_horizon else prev_horizon
-            new_events.append(f"[{rtl(cinema_name)}] booking horizon now open through {display_date(last_open)} (was {was})")
+            was = ltr(display_date(prev_horizon)) if prev_horizon else "אף פעם"
+            new_events.append(f"{rtl(cinema_name)}: אפשר להזמין עד {ltr(display_date(last_open))} (היה עד {was})")
         state["horizon"][cinema_id] = last_open
 
         for code, meta in watchlist.items():
@@ -194,12 +208,15 @@ def main():
             prev_days = set(state["watch_seen"].get(key, []))
             newly = sorted(d for d in watch_hits[code] if d not in prev_days)
             if newly:
-                suffix = " [IMAX]" if meta.get("imax") else ""
-                line = f"[{rtl(cinema_name)}] {rtl(meta['name'])}{suffix}: newly bookable on {', '.join(display_date(d) for d in newly)}"
+                imax_only = meta.get("imax")
+                lines = [f"{rtl(meta['name'])} {ltr(f'({code})')}"]
+                dates_label = "תאריכי IMAX חדשים" if imax_only else "אפשר להזמין (ראשון לציון) מתאריכים חדשים"
+                lines.append(f"{dates_label}: {ltr(', '.join(display_date(d) for d in newly))}")
                 url = film_urls.get(code)
                 if url:
-                    line += f"\nBook: {url}#/buy-tickets-by-film?for-movie={code}&in-cinema={cinema_id}&at={newly[0]}&view-mode=list"
-                new_events.append(line)
+                    link = f"{url}#/buy-tickets-by-film?for-movie={code}&in-cinema={cinema_id}&at={newly[0]}&view-mode=list"
+                    lines.append(f"לך תזמין אח\n{ltr(link)}")
+                new_events.append("\n".join(lines))
             state["watch_seen"][key] = sorted(watch_hits[code])
 
     save_json(STATE_FILE, state)

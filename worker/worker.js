@@ -75,9 +75,10 @@ async function getBookingStatus(codes) {
   return status;
 }
 
-// Isolate LTR runs (dates, codes, URLs) inside RTL Hebrew text so Telegram
+// Isolate LTR/RTL runs inside otherwise opposite-direction text so Telegram
 // doesn't garble the bidi ordering.
 const ltr = (s) => `⁦${s}⁩`;
+const rtl = (s) => `⁧${s}⁩`;
 
 // "YYYY-MM-DD" (the API/URL format) -> "DD/MM/YY" for display only.
 function displayDate(isoDate) {
@@ -131,7 +132,7 @@ function searchCatalog(catalog, query) {
 
 function formatMovieList(entries) {
   return entries
-    .map((e, i) => `${i + 1}. ${e.featureTitle}${e.attributes.includes("imax") ? " [IMAX]" : ""}`)
+    .map((e, i) => `${i + 1}. ${e.featureTitle}${e.attributes.includes("imax") ? ltr(" [IMAX]") : ""}`)
     .join("\n");
 }
 
@@ -182,7 +183,7 @@ async function sendTelegram(env, text, replyTo, chatId) {
 
 async function loadWatchlist(env) {
   const raw = await env.WATCHLIST_KV.get("watchlist", "json");
-  return raw || { "7460s2r": { name: "The Odyssey / האודיסאה", imax: false } };
+  return raw || { "7460s2r": { name: "האודיסאה", imax: false } };
 }
 
 async function saveWatchlist(env, watchlist) {
@@ -225,21 +226,22 @@ async function handleTelegramUpdate(env, update) {
       JSON.stringify(results.map((e) => ({ code: e.code, featureTitle: e.featureTitle })))
     );
     if (results.length) {
-      await sendTelegram(env, `${formatMovieList(results)}\n\nReply e.g. /watch 3  or  /watch 3 imax`, msgId);
+      await sendTelegram(env, `${formatMovieList(results)}\n\nלדוגמה: ${ltr("/watch 3")} או ${ltr("/watch 3 imax")}`, msgId);
     } else {
-      await sendTelegram(env, cmd === "/imax" ? "No IMAX movies found." : "No matching movies.", msgId);
+      await sendTelegram(env, cmd === "/imax" ? "לא נמצאו סרטי IMAX." : "לא נמצאו סרטים מתאימים.", msgId);
     }
   } else if (cmd === "/watch" && arg) {
     const catalog = await getCatalog();
     const lastMovieList = (await env.WATCHLIST_KV.get("last_movie_list", "json")) || [];
     const resolved = resolveWatchTarget(arg, lastMovieList, catalog);
     if (!resolved) {
-      await sendTelegram(env, "Couldn't resolve that. Try /movies <search> first, then /watch <number>.", msgId);
+      await sendTelegram(env, `לא הצלחתי לזהות את זה. תעשה קודם ${ltr("/movies <חיפוש>")} ואז ${ltr("/watch <number>")}.`, msgId);
     } else {
       const watchlist = await loadWatchlist(env);
       watchlist[resolved.code] = { name: resolved.name, imax: resolved.imaxOnly };
       await saveWatchlist(env, watchlist);
-      await sendTelegram(env, `Watching: ${resolved.name}${resolved.imaxOnly ? " (IMAX only)" : ""} (${resolved.code})`, msgId);
+      const imaxTag = resolved.imaxOnly ? " (רק IMAX)" : "";
+      await sendTelegram(env, `עכשיו מאזין ל: ${resolved.name}${imaxTag} ${ltr(`(${resolved.code})`)}`, msgId);
     }
   } else if (cmd === "/unwatch" && arg) {
     const code = extractFilmCode(arg.split(/\s+/)[0]);
@@ -248,9 +250,9 @@ async function handleTelegramUpdate(env, update) {
       const name = watchlist[code].name;
       delete watchlist[code];
       await saveWatchlist(env, watchlist);
-      await sendTelegram(env, `Stopped watching: ${name} (${code})`, msgId);
+      await sendTelegram(env, `הפסקתי להאזין ל: ${name} ${ltr(`(${code})`)}`, msgId);
     } else {
-      await sendTelegram(env, `Not on watchlist: ${code}`, msgId);
+      await sendTelegram(env, `הסרט הזה לא ברשימת המעקב: ${ltr(code)}`, msgId);
     }
   } else if (cmd === "/info") {
     const watchlist = await loadWatchlist(env);
@@ -260,7 +262,7 @@ async function handleTelegramUpdate(env, update) {
       // /info with no arg -> every film currently on the watchlist
       const codes = Object.keys(watchlist);
       if (!codes.length) {
-        await sendTelegram(env, "Watchlist is empty. Use /movies then /watch first.", msgId);
+        await sendTelegram(env, `רשימת המעקב ריקה. תעשה קודם ${ltr("/movies")} ואז ${ltr("/watch")}.`, msgId);
         return;
       }
       const status = await getBookingStatus(codes);
@@ -272,7 +274,7 @@ async function handleTelegramUpdate(env, update) {
       const lastMovieList = (await env.WATCHLIST_KV.get("last_movie_list", "json")) || [];
       const resolved = resolveWatchTarget(arg, lastMovieList, catalog);
       if (!resolved) {
-        await sendTelegram(env, "Couldn't resolve that. Try /movies <search> first, then /info <number>.", msgId);
+        await sendTelegram(env, `לא הצלחתי לזהות את זה. תעשה קודם ${ltr("/movies <חיפוש>")} ואז ${ltr("/info <number>")}.`, msgId);
       } else {
         const status = await getBookingStatus([resolved.code]);
         const block = formatFilmInfo(
@@ -288,10 +290,10 @@ async function handleTelegramUpdate(env, update) {
     const watchlist = await loadWatchlist(env);
     const codes = Object.keys(watchlist);
     if (codes.length) {
-      const lines = codes.map((code) => `- ${watchlist[code].name}${watchlist[code].imax ? " [IMAX only]" : ""} (${code})`);
-      await sendTelegram(env, "Watchlist:\n" + lines.join("\n"), msgId);
+      const lines = codes.map((code) => `- ${watchlist[code].name}${watchlist[code].imax ? " (רק IMAX)" : ""} ${ltr(`(${code})`)}`);
+      await sendTelegram(env, "רשימת המעקב:\n" + lines.join("\n"), msgId);
     } else {
-      await sendTelegram(env, "Watchlist is empty.", msgId);
+      await sendTelegram(env, "רשימת המעקב ריקה.", msgId);
     }
   } else if (cmd === "/start") {
     await sendTelegram(env, WELCOME_TEXT, msgId);
