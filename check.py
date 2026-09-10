@@ -45,6 +45,12 @@ CINEMAS = {
 HORIZON_DAYS = 21
 
 
+def rtl(s):
+    """Isolate an RTL (Hebrew) fragment inside an otherwise-LTR line so
+    Telegram doesn't garble the bidi ordering."""
+    return f"⁧{s}⁩"
+
+
 def fetch(url, headers=None):
     merged = {"User-Agent": "Mozilla/5.0"}
     merged.update(headers or {})
@@ -146,7 +152,7 @@ def main():
         for code, p in current.items():
             film_urls[code] = p["url"]
             if code not in prev:
-                new_events.append(f"[{feed_name}] NEW: {p['featureTitle']} -> {p['url']} (dateStarted={p.get('dateStarted')})")
+                new_events.append(f"[{feed_name}] NEW: {rtl(p['featureTitle'])} -> {p['url']} (dateStarted={p.get('dateStarted')})")
         state["feeds"][feed_name] = {code: {"featureTitle": p["featureTitle"], "url": p["url"]} for code, p in current.items()}
 
     # 2. Booking horizon per cinema + watchlist detection (respecting per-film IMAX-only flag)
@@ -173,7 +179,7 @@ def main():
 
         prev_horizon = state["horizon"].get(cinema_id)
         if last_open and last_open != prev_horizon:
-            new_events.append(f"[{cinema_name}] booking horizon now open through {last_open} (was {prev_horizon})")
+            new_events.append(f"[{rtl(cinema_name)}] booking horizon now open through {last_open} (was {prev_horizon})")
         state["horizon"][cinema_id] = last_open
 
         for code, meta in watchlist.items():
@@ -182,7 +188,7 @@ def main():
             newly = sorted(d for d in watch_hits[code] if d not in prev_days)
             if newly:
                 suffix = " [IMAX]" if meta.get("imax") else ""
-                line = f"[{cinema_name}] {meta['name']}{suffix}: newly bookable on {', '.join(newly)}"
+                line = f"[{rtl(cinema_name)}] {rtl(meta['name'])}{suffix}: newly bookable on {', '.join(newly)}"
                 url = film_urls.get(code)
                 if url:
                     line += f"\nBook: {url}#/buy-tickets-by-film?for-movie={code}&in-cinema={cinema_id}&at={newly[0]}&view-mode=list"
