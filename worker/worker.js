@@ -79,11 +79,17 @@ async function getBookingStatus(codes) {
 // doesn't garble the bidi ordering.
 const ltr = (s) => `⁦${s}⁩`;
 
+// "YYYY-MM-DD" (the API/URL format) -> "DD/MM/YY" for display only.
+function displayDate(isoDate) {
+  const [y, m, d] = isoDate.split("-");
+  return `${d}/${m}/${y.slice(2)}`;
+}
+
 function formatFilmInfo(code, catalogEntry, watchEntry, status) {
   const name = catalogEntry?.featureTitle || watchEntry?.name || code;
   const lines = [`${name} ${ltr(`(${code})`)}`];
   if (catalogEntry?.dateStarted) {
-    lines.push(`תאריך בכורה: ${ltr(catalogEntry.dateStarted.slice(0, 10))}`);
+    lines.push(`תאריך בכורה: ${ltr(displayDate(catalogEntry.dateStarted.slice(0, 10)))}`);
   }
   const bookingLink = (date) =>
     catalogEntry?.url
@@ -91,12 +97,12 @@ function formatFilmInfo(code, catalogEntry, watchEntry, status) {
       : null;
 
   if (status.anyDates.length) {
-    lines.push(`ניתן להזמין (ראשון לציון): ${ltr(status.anyDates[0])} עד ${ltr(status.anyDates[status.anyDates.length - 1])}`);
+    lines.push(`ניתן להזמין (ראשון לציון): ${ltr(displayDate(status.anyDates[0]))} עד ${ltr(displayDate(status.anyDates[status.anyDates.length - 1]))}`);
   } else {
     lines.push("עדיין לא ניתן להזמין (ראשון לציון)");
   }
   if (status.imaxDates.length) {
-    lines.push(`תאריכי IMAX: ${ltr(status.imaxDates[0])} עד ${ltr(status.imaxDates[status.imaxDates.length - 1])}`);
+    lines.push(`תאריכי IMAX: ${ltr(displayDate(status.imaxDates[0]))} עד ${ltr(displayDate(status.imaxDates[status.imaxDates.length - 1]))}`);
   }
 
   // Only one link is useful; prefer an IMAX-dated link if it exists.
@@ -159,6 +165,7 @@ const WELCOME_TEXT =
   "תעשה /movies בשביל רשימה של כל הסרטים\n" +
   "/imax בשביל כל הסרטים באיימקס\n" +
   "/watch <number> בשביל להאזין לסרט הזה\n" +
+  "/watch <number> imax בשביל להאזין רק להקרנות IMAX של הסרט הזה\n" +
   "/watchlist בשביל כל ההסרטים שאתה מאזין להם\n" +
   "/unwatch <code> בשביל להפסיק להאזין\n" +
   "/info <number|code> בשביל מידע על סרט ספציפי, או /info בלי כלום בשביל מידע על כל רשימת המעקב";

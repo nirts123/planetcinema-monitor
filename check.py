@@ -51,6 +51,12 @@ def rtl(s):
     return f"⁧{s}⁩"
 
 
+def display_date(iso_date):
+    """'YYYY-MM-DD' (the API/URL format) -> 'DD/MM/YY' for display only."""
+    y, m, d = iso_date.split("-")
+    return f"{d}/{m}/{y[2:]}"
+
+
 def fetch(url, headers=None):
     merged = {"User-Agent": "Mozilla/5.0"}
     merged.update(headers or {})
@@ -179,7 +185,8 @@ def main():
 
         prev_horizon = state["horizon"].get(cinema_id)
         if last_open and last_open != prev_horizon:
-            new_events.append(f"[{rtl(cinema_name)}] booking horizon now open through {last_open} (was {prev_horizon})")
+            was = display_date(prev_horizon) if prev_horizon else prev_horizon
+            new_events.append(f"[{rtl(cinema_name)}] booking horizon now open through {display_date(last_open)} (was {was})")
         state["horizon"][cinema_id] = last_open
 
         for code, meta in watchlist.items():
@@ -188,7 +195,7 @@ def main():
             newly = sorted(d for d in watch_hits[code] if d not in prev_days)
             if newly:
                 suffix = " [IMAX]" if meta.get("imax") else ""
-                line = f"[{rtl(cinema_name)}] {rtl(meta['name'])}{suffix}: newly bookable on {', '.join(newly)}"
+                line = f"[{rtl(cinema_name)}] {rtl(meta['name'])}{suffix}: newly bookable on {', '.join(display_date(d) for d in newly)}"
                 url = film_urls.get(code)
                 if url:
                     line += f"\nBook: {url}#/buy-tickets-by-film?for-movie={code}&in-cinema={cinema_id}&at={newly[0]}&view-mode=list"
