@@ -181,18 +181,26 @@ async function sendTelegram(env, text, replyTo, chatId) {
   }
 }
 
-async function loadWatchlist(env) {
-  const raw = await env.WATCHLIST_KV.get("watchlist", "json");
-  return raw || { "7460s2r": { name: "האודיסאה", imax: false } };
+// Each authorized chat (your private chat, plus one registered group) gets
+// its own independent watchlist and "last /movies list" in KV.
+function authorizedChats(env) {
+  return [env.TELEGRAM_CHAT_ID, env.GROUP_CHAT_ID].filter(Boolean).map(String);
 }
 
-async function saveWatchlist(env, watchlist) {
-  await env.WATCHLIST_KV.put("watchlist", JSON.stringify(watchlist));
+async function loadWatchlist(env, chatId) {
+  const raw = await env.WATCHLIST_KV.get(`watchlist:${chatId}`, "json");
+  if (raw) return raw;
+  // Seed the owner's private chat with the original default; groups start empty.
+  return String(chatId) === String(env.TELEGRAM_CHAT_ID) ? { "7460s2r": { name: "האודיסאה", imax: false } } : {};
+}
+
+async function saveWatchlist(env, chatId, watchlist) {
+  await env.WATCHLIST_KV.put(`watchlist:${chatId}`, JSON.stringify(watchlist));
 }
 
 async function handleChatMemberUpdate(env, update) {
   // Fires when someone starts/unblocks/re-adds the bot, even without an
-  // explicit /start message (e.g. via a shared bot link).
+  // explicit /start message (e.g. via a shared bot link, or being added to a group).
   const cm = update.my_chat_member;
   if (!cm) return;
   const wasActive = ["member", "administrator", "creator"].includes(cm.old_chat_member?.status);
@@ -206,75 +214,97 @@ async function handleTelegramUpdate(env, update) {
   await handleChatMemberUpdate(env, update);
 
   const msg = update.message;
-  if (!msg || !msg.text) return;
-  const chatId = String(msg.chat?.id || "");
-  if (chatId !== String(env.TELEGRAM_CHAT_ID)) return; // ignore anyone else
+  if (!msg) return;
 
-  const text = msg.text.trim();
+  // A human (not the bot itself) joining a group the bot is already in.
+  if (msg.new_chat_members?.length && !msg.new_chat_members.some((m) => m.is_bot)) {
+    const joinedChatId = String(msg.chat?.id || "");
+    if (authorizedChats(env).includes(joinedChatId)) {
+      await sendTelegram(env, WELCOME_TEXT, null, joinedChatId);
+    }
+  }
+
+  if (!msg.text) return;
+  const chatId = String(msg.chat?.id || "");
+  const isGroup = msg.chat?.type === "group" || msg.chat?.type === "supergroup";
+  const authorized = authorizedChats(env);
+  const msgId = msg.message_id;
+
+  if (!authorized.includes(chatId)) {
+    // Bootstrap flow: until GROUP_CHAT_ID is registered, tell whoever added
+    // the bot to a new group what its chat ID is, so it can be registered.
+    if (isGroup && !env.GROUP_CHAT_ID) {
+      await sendTelegram(env, `Group ID: ${ltr(chatId)}\nתן את המזהה הזה כדי לרשום את הקבוצה.`, msgId, chatId);
+    }
+    return;
+  }
+
+  let text = msg.text.trim();
   if (!text.startsWith("/")) return;
   const spaceIdx = text.indexOf(" ");
-  const cmd = (spaceIdx === -1 ? text : text.slice(0, spaceIdx)).toLowerCase();
+  let cmd = (spaceIdx === -1 ? text : text.slice(0, spaceIdx)).toLowerCase();
+  const atIdx = cmd.indexOf("@"); // group commands can be "/movies@botname"
+  if (atIdx !== -1) cmd = cmd.slice(0, atIdx);
   const arg = spaceIdx === -1 ? "" : text.slice(spaceIdx + 1).trim();
-  const msgId = msg.message_id;
 
   if (cmd === "/movies" || cmd === "/imax") {
     const catalog = await getCatalog();
     const pool = cmd === "/imax" ? catalog.filter((e) => e.attributes.includes("imax")) : catalog;
     const results = searchCatalog(pool, arg);
     await env.WATCHLIST_KV.put(
-      "last_movie_list",
+      `last_movie_list:${chatId}`,
       JSON.stringify(results.map((e) => ({ code: e.code, featureTitle: e.featureTitle })))
     );
     if (results.length) {
-      await sendTelegram(env, `${formatMovieList(results)}\n\nלדוגמה: ${ltr("/watch 3")} או ${ltr("/watch 3 imax")}`, msgId);
+      await sendTelegram(env, `${formatMovieList(results)}\n\nלדוגמה: ${ltr("/watch 3")} או ${ltr("/watch 3 imax")}`, msgId, chatId);
     } else {
-      await sendTelegram(env, cmd === "/imax" ? "לא נמצאו סרטי IMAX." : "לא נמצאו סרטים מתאימים.", msgId);
+      await sendTelegram(env, cmd === "/imax" ? "לא נמצאו סרטי IMAX." : "לא נמצאו סרטים מתאימים.", msgId, chatId);
     }
   } else if (cmd === "/watch" && arg) {
     const catalog = await getCatalog();
-    const lastMovieList = (await env.WATCHLIST_KV.get("last_movie_list", "json")) || [];
+    const lastMovieList = (await env.WATCHLIST_KV.get(`last_movie_list:${chatId}`, "json")) || [];
     const resolved = resolveWatchTarget(arg, lastMovieList, catalog);
     if (!resolved) {
-      await sendTelegram(env, `לא הצלחתי לזהות את זה. תעשה קודם ${ltr("/movies <חיפוש>")} ואז ${ltr("/watch <number>")}.`, msgId);
+      await sendTelegram(env, `לא הצלחתי לזהות את זה. תעשה קודם ${ltr("/movies <חיפוש>")} ואז ${ltr("/watch <number>")}.`, msgId, chatId);
     } else {
-      const watchlist = await loadWatchlist(env);
+      const watchlist = await loadWatchlist(env, chatId);
       watchlist[resolved.code] = { name: resolved.name, imax: resolved.imaxOnly };
-      await saveWatchlist(env, watchlist);
+      await saveWatchlist(env, chatId, watchlist);
       const imaxTag = resolved.imaxOnly ? " (רק IMAX)" : "";
-      await sendTelegram(env, `עכשיו מאזין ל: ${resolved.name}${imaxTag} ${ltr(`(${resolved.code})`)}`, msgId);
+      await sendTelegram(env, `עכשיו מאזין ל: ${resolved.name}${imaxTag} ${ltr(`(${resolved.code})`)}`, msgId, chatId);
     }
   } else if (cmd === "/unwatch" && arg) {
     const code = extractFilmCode(arg.split(/\s+/)[0]);
-    const watchlist = await loadWatchlist(env);
+    const watchlist = await loadWatchlist(env, chatId);
     if (watchlist[code]) {
       const name = watchlist[code].name;
       delete watchlist[code];
-      await saveWatchlist(env, watchlist);
-      await sendTelegram(env, `הפסקתי להאזין ל: ${name} ${ltr(`(${code})`)}`, msgId);
+      await saveWatchlist(env, chatId, watchlist);
+      await sendTelegram(env, `הפסקתי להאזין ל: ${name} ${ltr(`(${code})`)}`, msgId, chatId);
     } else {
-      await sendTelegram(env, `הסרט הזה לא ברשימת המעקב: ${ltr(code)}`, msgId);
+      await sendTelegram(env, `הסרט הזה לא ברשימת המעקב: ${ltr(code)}`, msgId, chatId);
     }
   } else if (cmd === "/info") {
-    const watchlist = await loadWatchlist(env);
+    const watchlist = await loadWatchlist(env, chatId);
     const catalog = await getCatalog();
 
     if (!arg) {
       // /info with no arg -> every film currently on the watchlist
       const codes = Object.keys(watchlist);
       if (!codes.length) {
-        await sendTelegram(env, `רשימת המעקב ריקה. תעשה קודם ${ltr("/movies")} ואז ${ltr("/watch")}.`, msgId);
+        await sendTelegram(env, `רשימת המעקב ריקה. תעשה קודם ${ltr("/movies")} ואז ${ltr("/watch")}.`, msgId, chatId);
         return;
       }
       const status = await getBookingStatus(codes);
       const blocks = codes.map((code) =>
         formatFilmInfo(code, catalog.find((e) => e.code === code), watchlist[code], status[code])
       );
-      await sendTelegram(env, blocks.join("\n\n"), msgId);
+      await sendTelegram(env, blocks.join("\n\n"), msgId, chatId);
     } else {
-      const lastMovieList = (await env.WATCHLIST_KV.get("last_movie_list", "json")) || [];
+      const lastMovieList = (await env.WATCHLIST_KV.get(`last_movie_list:${chatId}`, "json")) || [];
       const resolved = resolveWatchTarget(arg, lastMovieList, catalog);
       if (!resolved) {
-        await sendTelegram(env, `לא הצלחתי לזהות את זה. תעשה קודם ${ltr("/movies <חיפוש>")} ואז ${ltr("/info <number>")}.`, msgId);
+        await sendTelegram(env, `לא הצלחתי לזהות את זה. תעשה קודם ${ltr("/movies <חיפוש>")} ואז ${ltr("/info <number>")}.`, msgId, chatId);
       } else {
         const status = await getBookingStatus([resolved.code]);
         const block = formatFilmInfo(
@@ -283,20 +313,20 @@ async function handleTelegramUpdate(env, update) {
           watchlist[resolved.code],
           status[resolved.code]
         );
-        await sendTelegram(env, block, msgId);
+        await sendTelegram(env, block, msgId, chatId);
       }
     }
   } else if (cmd === "/watchlist") {
-    const watchlist = await loadWatchlist(env);
+    const watchlist = await loadWatchlist(env, chatId);
     const codes = Object.keys(watchlist);
     if (codes.length) {
       const lines = codes.map((code) => `- ${watchlist[code].name}${watchlist[code].imax ? " (רק IMAX)" : ""} ${ltr(`(${code})`)}`);
-      await sendTelegram(env, "רשימת המעקב:\n" + lines.join("\n"), msgId);
+      await sendTelegram(env, "רשימת המעקב:\n" + lines.join("\n"), msgId, chatId);
     } else {
-      await sendTelegram(env, "רשימת המעקב ריקה.", msgId);
+      await sendTelegram(env, "רשימת המעקב ריקה.", msgId, chatId);
     }
   } else if (cmd === "/start") {
-    await sendTelegram(env, WELCOME_TEXT, msgId);
+    await sendTelegram(env, WELCOME_TEXT, msgId, chatId);
   }
 }
 
@@ -319,7 +349,8 @@ export default {
       if (auth !== `Bearer ${env.SYNC_SECRET}`) {
         return new Response("unauthorized", { status: 401 });
       }
-      const watchlist = await loadWatchlist(env);
+      const chatId = url.searchParams.get("chat_id") || env.TELEGRAM_CHAT_ID;
+      const watchlist = await loadWatchlist(env, chatId);
       return new Response(JSON.stringify(watchlist), { headers: { "Content-Type": "application/json" } });
     }
 

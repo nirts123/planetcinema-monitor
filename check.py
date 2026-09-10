@@ -98,17 +98,21 @@ def get_day_films(cinema_id, day):
     return {f["id"]: {"name": f["name"], "attributes": f.get("attributeIds", [])} for f in d["body"]["films"]}
 
 
-def load_watchlist():
-    """Watchlist is owned by the Cloudflare Worker (Telegram-managed); fetch it."""
+def load_watchlist(chat_id):
+    """Watchlist is owned by the Cloudflare Worker (Telegram-managed); fetch
+    the one belonging to a specific chat (private or a registered group)."""
     worker_url = os.environ.get("WORKER_URL")
     sync_secret = os.environ.get("WORKER_SYNC_SECRET")
     if not worker_url or not sync_secret:
         print("! WORKER_URL/WORKER_SYNC_SECRET not set, watchlist checks skipped", file=sys.stderr)
         return {}
     try:
-        raw = fetch(f"{worker_url}/watchlist", headers={"Authorization": f"Bearer {sync_secret}"})
+        raw = fetch(
+            f"{worker_url}/watchlist?chat_id={chat_id}",
+            headers={"Authorization": f"Bearer {sync_secret}"},
+        )
     except Exception as e:
-        print(f"! failed to fetch watchlist from worker: {e}", file=sys.stderr)
+        print(f"! failed to fetch watchlist from worker for {chat_id}: {e}", file=sys.stderr)
         return {}
     watchlist = {}
     for code, val in raw.items():
@@ -135,11 +139,10 @@ def load_state():
     return load_json(STATE_FILE, {"feeds": {}, "horizon": {}, "watch_seen": {}})
 
 
-def send_telegram(text):
+def send_telegram(text, chat_id):
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
-    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
     if not token or not chat_id:
-        print("(no TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID set, skipping push)", file=sys.stderr)
+        print("(no TELEGRAM_BOT_TOKEN/chat_id, skipping push)", file=sys.stderr)
         return
     import urllib.parse
 
@@ -155,11 +158,16 @@ def send_telegram(text):
 
 def main():
     state = load_state()
-    watchlist = load_watchlist()
-    new_events = []
+    owner_chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+    profiles = [("private", owner_chat_id)]
+    group_chat_id = os.environ.get("GROUP_CHAT_ID")
+    if group_chat_id:
+        profiles.append(("group", group_chat_id))
+
+    owner_events = []
     film_urls = {}
 
-    # 1. New movies in coming-soon / now-playing feeds
+    # 1. New movies in coming-soon / now-playing feeds (site-wide; goes to owner only)
     for feed_name in ("coming-soon", "now-playing"):
         try:
             current = get_feed(feed_name)
@@ -172,14 +180,14 @@ def main():
             if code not in prev:
                 started = p.get("dateStarted")
                 started_str = f" (יציאה: {ltr(display_date(started[:10]))})" if started else ""
-                new_events.append(f"סרט חדש [{FEED_LABELS.get(feed_name, feed_name)}]: {p['featureTitle']}{started_str}\n{ltr(p['url'])}")
+                owner_events.append(f"סרט חדש [{FEED_LABELS.get(feed_name, feed_name)}]: {p['featureTitle']}{started_str}\n{ltr(p['url'])}")
         state["feeds"][feed_name] = {code: {"featureTitle": p["featureTitle"], "url": p["url"]} for code, p in current.items()}
 
-    # 2. Booking horizon per cinema + watchlist detection (respecting per-film IMAX-only flag)
+    # 2. Booking horizon per cinema (site-wide; goes to owner only)
     today = date.today()
+    day_films_cache = {}
     for cinema_id, cinema_name in CINEMAS.items():
         last_open = None
-        watch_hits = {code: set() for code in watchlist}
         for i in range(HORIZON_DAYS):
             day = (today + timedelta(days=i)).isoformat()
             try:
@@ -187,46 +195,64 @@ def main():
             except Exception as e:
                 print(f"! failed {cinema_id} {day}: {e}", file=sys.stderr)
                 continue
+            day_films_cache[(cinema_id, day)] = films
             if films:
                 last_open = day
-            for code, meta in watchlist.items():
-                film = films.get(code)
-                if not film:
-                    continue
-                if meta.get("imax") and "imax" not in film["attributes"]:
-                    continue
-                watch_hits[code].add(day)
 
         prev_horizon = state["horizon"].get(cinema_id)
         if last_open and last_open != prev_horizon:
             was = ltr(display_date(prev_horizon)) if prev_horizon else "אף פעם"
-            new_events.append(f"{rtl(cinema_name)}: אפשר להזמין עד {ltr(display_date(last_open))} (היה עד {was})")
+            owner_events.append(f"{rtl(cinema_name)}: אפשר להזמין עד {ltr(display_date(last_open))} (היה עד {was})")
         state["horizon"][cinema_id] = last_open
 
-        for code, meta in watchlist.items():
-            key = f"{cinema_id}:{code}"
-            prev_days = set(state["watch_seen"].get(key, []))
-            newly = sorted(d for d in watch_hits[code] if d not in prev_days)
-            if newly:
-                imax_only = meta.get("imax")
-                lines = [f"{rtl(meta['name'])} {ltr(f'({code})')}"]
-                dates_label = "תאריכי IMAX חדשים" if imax_only else "אפשר להזמין (ראשון לציון) מתאריכים חדשים"
-                lines.append(f"{dates_label}: {ltr(', '.join(display_date(d) for d in newly))}")
-                url = film_urls.get(code)
-                if url:
-                    link = f"{url}#/buy-tickets-by-film?for-movie={code}&in-cinema={cinema_id}&at={newly[0]}&view-mode=list"
-                    lines.append(f"לך תזמין אח\n{ltr(link)}")
-                new_events.append("\n".join(lines))
-            state["watch_seen"][key] = sorted(watch_hits[code])
+    if owner_events:
+        message = "\n".join(owner_events)
+        print(message)
+        if owner_chat_id:
+            send_telegram(message, owner_chat_id)
+    else:
+        print("No site-wide changes since last check.")
+
+    # 3. Per-profile watchlist detection (each chat's own watchlist, own alerts)
+    for label, chat_id in profiles:
+        watchlist = load_watchlist(chat_id)
+        profile_events = []
+        for cinema_id, cinema_name in CINEMAS.items():
+            for code, meta in watchlist.items():
+                key = f"{label}:{cinema_id}:{code}"
+                prev_days = set(state["watch_seen"].get(key, []))
+                hits = set()
+                for i in range(HORIZON_DAYS):
+                    day = (today + timedelta(days=i)).isoformat()
+                    films = day_films_cache.get((cinema_id, day), {})
+                    film = films.get(code)
+                    if not film:
+                        continue
+                    if meta.get("imax") and "imax" not in film["attributes"]:
+                        continue
+                    hits.add(day)
+
+                newly = sorted(d for d in hits if d not in prev_days)
+                if newly:
+                    imax_only = meta.get("imax")
+                    lines = [f"{rtl(meta['name'])} {ltr(f'({code})')}"]
+                    dates_label = "תאריכי IMAX חדשים" if imax_only else "אפשר להזמין (ראשון לציון) מתאריכים חדשים"
+                    lines.append(f"{dates_label}: {ltr(', '.join(display_date(d) for d in newly))}")
+                    url = film_urls.get(code)
+                    if url:
+                        link = f"{url}#/buy-tickets-by-film?for-movie={code}&in-cinema={cinema_id}&at={newly[0]}&view-mode=list"
+                        lines.append(f"לך תזמין אח\n{ltr(link)}")
+                    profile_events.append("\n".join(lines))
+                state["watch_seen"][key] = sorted(hits)
+
+        if profile_events:
+            message = "\n".join(profile_events)
+            print(f"[{label}] {message}")
+            send_telegram(message, chat_id)
+        else:
+            print(f"[{label}] No watchlist changes since last check.")
 
     save_json(STATE_FILE, state)
-
-    if new_events:
-        message = "\n".join(new_events)
-        print(message)
-        send_telegram(message)
-    else:
-        print("No changes since last check.")
 
 
 if __name__ == "__main__":

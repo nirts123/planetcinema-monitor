@@ -20,6 +20,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           WORKER_URL: ${{ secrets.WORKER_URL }}
           WORKER_SYNC_SECRET: ${{ secrets.WORKER_SYNC_SECRET }}
+          GROUP_CHAT_ID: ${{ secrets.GROUP_CHAT_ID }}
         run: python3 check.py
 
       - name: Commit updated state
