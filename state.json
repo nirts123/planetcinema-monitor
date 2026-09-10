@@ -1,0 +1,398 @@
+{
+  "feeds": {
+    "coming-soon": {
+      "8326s2r": {
+        "featureTitle": "מאבדים שליטה",
+        "url": "https://www.planetcinema.co.il/films/rolling-loud/8326s2r"
+      },
+      "8105s2r": {
+        "featureTitle": "חולית: חלק שלישי",
+        "url": "https://www.planetcinema.co.il/films/dune-part-three/8105s2r"
+      },
+      "8482s2r": {
+        "featureTitle": "בעבודה",
+        "url": "https://www.planetcinema.co.il/films/at-work/8482s2r"
+      },
+      "8459s2r": {
+        "featureTitle": "האויב שבפנים",
+        "url": "https://www.planetcinema.co.il/films/resident-evil/8459s2r"
+      },
+      "8503s2r": {
+        "featureTitle": "להתאהב בטוסקנה",
+        "url": "https://www.planetcinema.co.il/films/before-we-leave-tuscany/8503s2r"
+      },
+      "8366s2r": {
+        "featureTitle": "מהיר ועצבני - חגיגות 25 שנה",
+        "url": "https://www.planetcinema.co.il/films/fast-and-the-furious-25th-anniversary/8366s2r"
+      },
+      "8325s2r": {
+        "featureTitle": "ראנר",
+        "url": "https://www.planetcinema.co.il/films/runner/8325s2r"
+      },
+      "8423s2r": {
+        "featureTitle": "תלויה באוויר 2",
+        "url": "https://www.planetcinema.co.il/films/fall-2/8423s2r"
+      },
+      "8485s2r1": {
+        "featureTitle": "Heart of the Beast - СЕРДЦЕ ЗВЕРЯ",
+        "url": "https://www.planetcinema.co.il/films/heart-of-the-beast-/8485s2r1"
+      },
+      "8484s2r": {
+        "featureTitle": "אספן המשאלות",
+        "url": "https://www.planetcinema.co.il/films/land-of-someitmes/8484s2r"
+      },
+      "8485s2r": {
+        "featureTitle": "בלב הפרא",
+        "url": "https://www.planetcinema.co.il/films/heart-of-the-beast/8485s2r"
+      },
+      "8095d2r": {
+        "featureTitle": "האי הנעלם",
+        "url": "https://www.planetcinema.co.il/films/forgotten-island/8095d2r"
+      },
+      "7685d2r": {
+        "featureTitle": "וונדר-דוג",
+        "url": "https://www.planetcinema.co.il/films/charlie-the-wonderdog/7685d2r"
+      },
+      "8199s2r": {
+        "featureTitle": "יתום",
+        "url": "https://www.planetcinema.co.il/films/orphan/8199s2r"
+      },
+      "8504s2r": {
+        "featureTitle": "קרולרס",
+        "url": "https://www.planetcinema.co.il/films/crawlers/8504s2r"
+      },
+      "8221s2r": {
+        "featureTitle": "דיגר",
+        "url": "https://www.planetcinema.co.il/films/digger/8221s2r"
+      },
+      "8244s2r": {
+        "featureTitle": "תעתוע",
+        "url": "https://www.planetcinema.co.il/films/verity/8244s2r"
+      },
+      "8330s2r": {
+        "featureTitle": "החשבון החברתי",
+        "url": "https://www.planetcinema.co.il/films/the-social-reckoning/8330s2r"
+      },
+      "8505s2r": {
+        "featureTitle": "מפרץ האימה",
+        "url": "https://www.planetcinema.co.il/films/the-bay/8505s2r"
+      },
+      "8182s2r": {
+        "featureTitle": "סטריט פייטר",
+        "url": "https://www.planetcinema.co.il/films/street-fighter/8182s2r"
+      },
+      "8222s2r": {
+        "featureTitle": "קלייפייס",
+        "url": "https://www.planetcinema.co.il/films/clayface/8222s2r"
+      },
+      "8309s2r": {
+        "featureTitle": "איך לשדוד בנק",
+        "url": "https://www.planetcinema.co.il/films/how-to-rob-a-bank/8309s2r"
+      },
+      "7803s2r": {
+        "featureTitle": "משחקי הרעב: זריחה על האסיף",
+        "url": "https://www.planetcinema.co.il/films/the-hunger-games-sunrise-on-the-reaping/7803s2r"
+      },
+      "8181s2r": {
+        "featureTitle": "פגוש את הכלה",
+        "url": "https://www.planetcinema.co.il/films/focker-in-law/8181s2r"
+      },
+      "7482d2r": {
+        "featureTitle": "חתול תעלול: הסרט",
+        "url": "https://www.planetcinema.co.il/films/the-cat-in-the-hat/7482d2r"
+      },
+      "7879s2r": {
+        "featureTitle": "הנוקמים: עלייתו של ד\"ר דום",
+        "url": "https://www.planetcinema.co.il/films/avengers-doomsday/7879s2r"
+      },
+      "8392s2r": {
+        "featureTitle": "אנגרי בירדס הסרט 3",
+        "url": "https://www.planetcinema.co.il/films/the-angry-birds-movie-3/8392s2r"
+      },
+      "8310s2r": {
+        "featureTitle": "עידן הקרח: חם אש",
+        "url": "https://www.planetcinema.co.il/films/ice-age-boiling-point/8310s2r"
+      }
+    },
+    "now-playing": {
+      "8425s2i": {
+        "featureTitle": "Oasis: Don't Look Back In Anger",
+        "url": "https://www.planetcinema.co.il/films/oasis-dont-look-back-in-anger/8425s2i"
+      },
+      "8469s2r": {
+        "featureTitle": "הנוקמים: סוף המשחק - הדרן",
+        "url": "https://www.planetcinema.co.il/films/avengers-endgame-re-release/8469s2r"
+      },
+      "8469s2riv": {
+        "featureTitle": "הנוקמים: סוף המשחק - הדרן -  Infinity Vi",
+        "url": "https://www.planetcinema.co.il/films/avengers-endgame-re-release-infinity-vision/8469s2riv"
+      },
+      "8461s2r": {
+        "featureTitle": "איש החידות",
+        "url": "https://www.planetcinema.co.il/films/the-luckiest-man-in-america/8461s2r"
+      },
+      "8483s2r": {
+        "featureTitle": "המרד",
+        "url": "https://www.planetcinema.co.il/films/the-uprising/8483s2r"
+      },
+      "8433s2r": {
+        "featureTitle": "חולים על החיים",
+        "url": "https://www.planetcinema.co.il/films/sunny-dancer/8433s2r"
+      },
+      "8473d2r": {
+        "featureTitle": "טד החוקר ומנורת הקסמים",
+        "url": "https://www.planetcinema.co.il/films/tad-and-the-magic-lamp/8473d2r"
+      },
+      "8051d2r": {
+        "featureTitle": "ילד המדבר",
+        "url": "https://www.planetcinema.co.il/films/the-desert-child/8051d2r"
+      },
+      "8220s2r": {
+        "featureTitle": "קסם מעשי 2",
+        "url": "https://www.planetcinema.co.il/films/practical-magic-2/8220s2r"
+      },
+      "8460s2r": {
+        "featureTitle": "לה טראוויאטה - אופרה בקולנוע",
+        "url": "https://www.planetcinema.co.il/films/la-traviata/8460s2r"
+      },
+      "8462s2r": {
+        "featureTitle": "אדיוטים",
+        "url": "https://www.planetcinema.co.il/films/idiots/8462s2r"
+      },
+      "8320s2r": {
+        "featureTitle": "בכל מחיר",
+        "url": "https://www.planetcinema.co.il/films/by-any-means/8320s2r"
+      },
+      "8440s2r": {
+        "featureTitle": "מה שמריאל יודעת",
+        "url": "https://www.planetcinema.co.il/films/what-marielle-knows/8440s2r"
+      },
+      "8471s2r": {
+        "featureTitle": "סיפורים קרועים",
+        "url": "https://www.planetcinema.co.il/films/homo-sapiens/8471s2r"
+      },
+      "8402s2r": {
+        "featureTitle": "עצמאות",
+        "url": "https://www.planetcinema.co.il/films/tell-me-everything/8402s2r"
+      },
+      "8472s2r": {
+        "featureTitle": "שנת הבגידה שלי",
+        "url": "https://www.planetcinema.co.il/films/a-brief-affair/8472s2r"
+      },
+      "7944s2r": {
+        "featureTitle": "כוכבי כלב",
+        "url": "https://www.planetcinema.co.il/films/dog-stars/7944s2r"
+      },
+      "8093d2r1": {
+        "featureTitle": "ЩЕНЯЧИЙ ПАТРУЛЬ: ДИНОФИЛЬМ - Paw Patrol:",
+        "url": "https://www.planetcinema.co.il/films/8093d2r1/8093d2r1"
+      },
+      "7942d2r": {
+        "featureTitle": "דג ושמו באסה",
+        "url": "https://www.planetcinema.co.il/films/the-pout-pout-fish/7942d2r"
+      },
+      "8183s2r": {
+        "featureTitle": "הרוע שבפנים: מחוץ למעבר",
+        "url": "https://www.planetcinema.co.il/films/insidious-out-of-the-further/8183s2r"
+      },
+      "8439s2r": {
+        "featureTitle": "ויהי גשם",
+        "url": "https://www.planetcinema.co.il/films/let-it-rain/8439s2r"
+      },
+      "8295s2r": {
+        "featureTitle": "נקמה בלב ים",
+        "url": "https://www.planetcinema.co.il/films/mutiny/8295s2r"
+      },
+      "7418s2r": {
+        "featureTitle": "צריך שניים לטנגו",
+        "url": "https://www.planetcinema.co.il/films/it-takes-two-to-tango/7418s2r"
+      },
+      "8352s2r": {
+        "featureTitle": "קיוטי נגד אקמי",
+        "url": "https://www.planetcinema.co.il/films/coyote-vs-acme/8352s2r"
+      },
+      "8160s2r1": {
+        "featureTitle": "НА КРАЮ ОУК-СТРИТ- End of Oak street",
+        "url": "https://www.planetcinema.co.il/films/8160s2r1/8160s2r1"
+      },
+      "8375s2r": {
+        "featureTitle": "בחזרה מההימלאיה",
+        "url": "https://www.planetcinema.co.il/films/valley-of-shadows/8375s2r"
+      },
+      "8386s2r": {
+        "featureTitle": "המשפחה האיטלקית שלי",
+        "url": "https://www.planetcinema.co.il/films/damned-if-you-do-damned-if-you-dont/8386s2r"
+      },
+      "8230s2r": {
+        "featureTitle": "חג מולד מר",
+        "url": "https://www.planetcinema.co.il/films/bitter-christmas/8230s2r"
+      },
+      "8184s2r": {
+        "featureTitle": "לגמור את הלילה",
+        "url": "https://www.planetcinema.co.il/films/one-night-only/8184s2r"
+      },
+      "8160s2r": {
+        "featureTitle": "סוף רחוב האלון",
+        "url": "https://www.planetcinema.co.il/films/end-of-oak-street/8160s2r"
+      },
+      "8040s2r": {
+        "featureTitle": "פיוז",
+        "url": "https://www.planetcinema.co.il/films/fuze/8040s2r"
+      },
+      "8317s2r": {
+        "featureTitle": "איש הגלידה",
+        "url": "https://www.planetcinema.co.il/films/ice-cream-man/8317s2r"
+      },
+      "8403s2r": {
+        "featureTitle": "גבעה 338",
+        "url": "https://www.planetcinema.co.il/films/hill-338/8403s2r"
+      },
+      "8093d2r": {
+        "featureTitle": "מפרץ ההרפתקאות: אי הדינוזאורים",
+        "url": "https://www.planetcinema.co.il/films/paw-patrol-the-dino-movie/8093d2r"
+      },
+      "7941s2r": {
+        "featureTitle": "מרסופילאמי",
+        "url": "https://www.planetcinema.co.il/films/marsupilami/7941s2r"
+      },
+      "7622d2r": {
+        "featureTitle": "פרנקי והמפלצות",
+        "url": "https://www.planetcinema.co.il/films/stitch-head/7622d2r"
+      },
+      "8085s2r2": {
+        "featureTitle": "ЧЕЛОВЕК-ПАУК: НОВЫЙ ДЕНЬ - Spider-Man:",
+        "url": "https://www.planetcinema.co.il/films/8085s2r2/8085s2r2"
+      },
+      "8085s2r": {
+        "featureTitle": "ספיידרמן: יום חדש",
+        "url": "https://www.planetcinema.co.il/films/spider-man-brand-new-day/8085s2r"
+      },
+      "6628d2r": {
+        "featureTitle": "גרייסי ופדרו: חיות המחמד בפעולה",
+        "url": "https://www.planetcinema.co.il/films/gracie-pedro-pets-to-the-rescue/6628d2r"
+      },
+      "7541d2r": {
+        "featureTitle": "טפיטי: הרפתקה במדבר",
+        "url": "https://www.planetcinema.co.il/films/tafiti-across-the-desert/7541d2r"
+      },
+      "6928d2r": {
+        "featureTitle": "סוד החיות הקסומות 3",
+        "url": "https://www.planetcinema.co.il/films/school-of-magical-animals-3/6928d2r"
+      },
+      "8289s2r": {
+        "featureTitle": "תיכון מגשימים",
+        "url": "https://www.planetcinema.co.il/films/magshimim/8289s2r"
+      },
+      "7460s2r2": {
+        "featureTitle": "ОДИССЕЯ - The Odyssey",
+        "url": "https://www.planetcinema.co.il/films/-the-odyssey/7460s2r2"
+      },
+      "7460s2r": {
+        "featureTitle": "האודיסאה",
+        "url": "https://www.planetcinema.co.il/films/the-odyssey/7460s2r"
+      },
+      "8046d2r": {
+        "featureTitle": "מאשה והדוב-ההרפתקה הגדולה",
+        "url": "https://www.planetcinema.co.il/films/masha-the-bear-wonder-park/8046d2r"
+      },
+      "8223s2r": {
+        "featureTitle": "סולטיז הסרט - וולוג ה-100",
+        "url": "https://www.planetcinema.co.il/films/saltiz/8223s2r"
+      },
+      "8200s2r": {
+        "featureTitle": "ההזמנה",
+        "url": "https://www.planetcinema.co.il/films/the-invite/8200s2r"
+      },
+      "8262s2r": {
+        "featureTitle": "מאמא",
+        "url": "https://www.planetcinema.co.il/films/mama/8262s2r"
+      },
+      "7794s2r": {
+        "featureTitle": "מואנה לייב אקשן",
+        "url": "https://www.planetcinema.co.il/films/moana-live-action/7794s2r"
+      },
+      "8023s2r": {
+        "featureTitle": "מיניונים ומפלצות",
+        "url": "https://www.planetcinema.co.il/films/minions-monsters/8023s2r"
+      },
+      "7578s2r": {
+        "featureTitle": "ערך סנטימנטלי",
+        "url": "https://www.planetcinema.co.il/films/sentimental-value/7578s2r"
+      },
+      "7784s2r": {
+        "featureTitle": "צעצוע של סיפור 5",
+        "url": "https://www.planetcinema.co.il/films/toy-story-5/7784s2r"
+      },
+      "8232s2r": {
+        "featureTitle": "קופה ראשית",
+        "url": "https://www.planetcinema.co.il/films/kupa-rashit/8232s2r"
+      },
+      "8134s2r": {
+        "featureTitle": "אובססיה",
+        "url": "https://www.planetcinema.co.il/films/obsession/8134s2r"
+      },
+      "7785s2r": {
+        "featureTitle": "מייקל",
+        "url": "https://www.planetcinema.co.il/films/michael/7785s2r"
+      }
+    }
+  },
+  "horizon": {
+    "1072": "2026-09-26",
+    "1025": "2026-09-26",
+    "1074": "2026-09-26",
+    "1075": "2026-09-26",
+    "1070": "2026-09-26",
+    "1073": "2026-09-26"
+  },
+  "watch_seen": {
+    "1072:7460s2r": [
+      "2026-09-10",
+      "2026-09-12",
+      "2026-09-13",
+      "2026-09-14",
+      "2026-09-15",
+      "2026-09-16"
+    ],
+    "1025:7460s2r": [
+      "2026-09-10",
+      "2026-09-12",
+      "2026-09-13",
+      "2026-09-14",
+      "2026-09-15",
+      "2026-09-16"
+    ],
+    "1074:7460s2r": [
+      "2026-09-10",
+      "2026-09-12",
+      "2026-09-13",
+      "2026-09-14",
+      "2026-09-15",
+      "2026-09-16"
+    ],
+    "1075:7460s2r": [
+      "2026-09-10",
+      "2026-09-12",
+      "2026-09-13",
+      "2026-09-14",
+      "2026-09-15",
+      "2026-09-16"
+    ],
+    "1070:7460s2r": [
+      "2026-09-10",
+      "2026-09-12",
+      "2026-09-13",
+      "2026-09-14",
+      "2026-09-15",
+      "2026-09-16"
+    ],
+    "1073:7460s2r": [
+      "2026-09-10",
+      "2026-09-12",
+      "2026-09-13",
+      "2026-09-14",
+      "2026-09-15",
+      "2026-09-16"
+    ]
+  }
+}
