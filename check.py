@@ -133,6 +133,7 @@ def main():
     state = load_state()
     watchlist = load_watchlist()
     new_events = []
+    film_urls = {}
 
     # 1. New movies in coming-soon / now-playing feeds
     for feed_name in ("coming-soon", "now-playing"):
@@ -143,6 +144,7 @@ def main():
             continue
         prev = state["feeds"].get(feed_name, {})
         for code, p in current.items():
+            film_urls[code] = p["url"]
             if code not in prev:
                 new_events.append(f"[{feed_name}] NEW: {p['featureTitle']} -> {p['url']} (dateStarted={p.get('dateStarted')})")
         state["feeds"][feed_name] = {code: {"featureTitle": p["featureTitle"], "url": p["url"]} for code, p in current.items()}
@@ -180,7 +182,11 @@ def main():
             newly = sorted(d for d in watch_hits[code] if d not in prev_days)
             if newly:
                 suffix = " [IMAX]" if meta.get("imax") else ""
-                new_events.append(f"[{cinema_name}] {meta['name']}{suffix}: newly bookable on {', '.join(newly)}")
+                line = f"[{cinema_name}] {meta['name']}{suffix}: newly bookable on {', '.join(newly)}"
+                url = film_urls.get(code)
+                if url:
+                    line += f"\nBook: {url}#/buy-tickets-by-film?for-movie={code}&in-cinema={cinema_id}&at={newly[0]}&view-mode=list"
+                new_events.append(line)
             state["watch_seen"][key] = sorted(watch_hits[code])
 
     save_json(STATE_FILE, state)

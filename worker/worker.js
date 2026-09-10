@@ -6,6 +6,8 @@
 
 const SITE = "10100";
 const BASE = "https://www.planetcinema.co.il/il/data-api-service/v1";
+const CINEMA_ID = "1072"; // Planet Rishon LeZion
+const INFO_HORIZON_DAYS = 14;
 
 async function getFeed(name) {
   const res = await fetch(`${BASE}/feed/${SITE}/byName/${name}?lang=he_IL`, {
@@ -36,6 +38,68 @@ async function getCatalog() {
     out.push(e);
   }
   return out;
+}
+
+async function getDayFilms(day) {
+  const res = await fetch(
+    `${BASE}/quickbook/${SITE}/film-events/in-cinema/${CINEMA_ID}/at-date/${day}?attr=&lang=he_IL`,
+    { headers: { "User-Agent": "Mozilla/5.0" } }
+  );
+  const d = await res.json();
+  const out = {};
+  for (const f of d.body.films) out[f.id] = { name: f.name, attributes: f.attributeIds || [] };
+  return out;
+}
+
+function isoDate(offsetDays) {
+  const d = new Date();
+  d.setUTCDate(d.getUTCDate() + offsetDays);
+  return d.toISOString().slice(0, 10);
+}
+
+async function getBookingStatus(codes) {
+  // code -> { anyDates: [...], imaxDates: [...] }
+  const status = {};
+  for (const code of codes) status[code] = { anyDates: [], imaxDates: [] };
+  const days = Array.from({ length: INFO_HORIZON_DAYS }, (_, i) => isoDate(i));
+  const perDay = await Promise.all(days.map((day) => getDayFilms(day).catch(() => ({}))));
+  perDay.forEach((films, i) => {
+    const day = days[i];
+    for (const code of codes) {
+      const film = films[code];
+      if (!film) continue;
+      status[code].anyDates.push(day);
+      if (film.attributes.includes("imax")) status[code].imaxDates.push(day);
+    }
+  });
+  return status;
+}
+
+function formatFilmInfo(code, catalogEntry, watchEntry, status) {
+  const name = catalogEntry?.featureTitle || watchEntry?.name || code;
+  const lines = [`${name} (${code})`];
+  if (catalogEntry?.dateStarted) lines.push(`תאריך בכורה: ${catalogEntry.dateStarted.slice(0, 10)}`);
+  lines.push(`IMAX בעולם: ${catalogEntry?.attributes?.includes("imax") ? "כן" : "לא ידוע/לא"}`);
+  if (status.anyDates.length) {
+    lines.push(`ניתן להזמין (ראשון לציון): ${status.anyDates[0]} עד ${status.anyDates[status.anyDates.length - 1]}`);
+    if (catalogEntry?.url) {
+      const bookingUrl = `${catalogEntry.url}#/buy-tickets-by-film?for-movie=${code}&in-cinema=${CINEMA_ID}&at=${status.anyDates[0]}&view-mode=list`;
+      lines.push(`הזמנה: ${bookingUrl}`);
+    }
+  } else {
+    lines.push("עדיין לא ניתן להזמין (ראשון לציון)");
+  }
+  if (status.imaxDates.length) {
+    lines.push(`תאריכי IMAX זמינים: ${status.imaxDates.join(", ")}`);
+    if (catalogEntry?.url) {
+      const imaxUrl = `${catalogEntry.url}#/buy-tickets-by-film?for-movie=${code}&in-cinema=${CINEMA_ID}&at=${status.imaxDates[0]}&view-mode=list`;
+      lines.push(`הזמנת IMAX: ${imaxUrl}`);
+    }
+  }
+  if (watchEntry) {
+    lines.push(`ברשימת המעקב שלך${watchEntry.imax ? " (רק IMAX)" : ""}`);
+  }
+  return lines.join("\n");
 }
 
 function extractFilmCode(arg) {
@@ -84,11 +148,20 @@ function resolveWatchTarget(arg, lastMovieList, catalog) {
   return { code, name: match ? match.featureTitle : code, imaxOnly };
 }
 
-async function sendTelegram(env, text, replyTo) {
+const WELCOME_TEXT =
+  "ברוך הבא אחשלי לבוט מזיין סרטים\n" +
+  "תעשה /movies בשביל רשימה של כל הסרטים\n" +
+  "/imax בשביל כל הסרטים באיימקס\n" +
+  "/watch <number> בשביל להאזין לסרט הזה\n" +
+  "/watchlist בשביל כל ההסרטים שאתה מאזין להם\n" +
+  "/unwatch <code> בשביל להפסיק להאזין\n" +
+  "/info <number|code> בשביל מידע על סרט ספציפי, או /info בלי כלום בשביל מידע על כל רשימת המעקב";
+
+async function sendTelegram(env, text, replyTo, chatId) {
   const url = `https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`;
   for (let i = 0; i < text.length; i += 3500) {
     const chunk = text.slice(i, i + 3500);
-    const params = new URLSearchParams({ chat_id: env.TELEGRAM_CHAT_ID, text: chunk });
+    const params = new URLSearchParams({ chat_id: chatId || env.TELEGRAM_CHAT_ID, text: chunk });
     if (replyTo) params.set("reply_to_message_id", String(replyTo));
     await fetch(url, { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: params });
   }
@@ -103,7 +176,21 @@ async function saveWatchlist(env, watchlist) {
   await env.WATCHLIST_KV.put("watchlist", JSON.stringify(watchlist));
 }
 
+async function handleChatMemberUpdate(env, update) {
+  // Fires when someone starts/unblocks/re-adds the bot, even without an
+  // explicit /start message (e.g. via a shared bot link).
+  const cm = update.my_chat_member;
+  if (!cm) return;
+  const wasActive = ["member", "administrator", "creator"].includes(cm.old_chat_member?.status);
+  const isActive = ["member", "administrator", "creator"].includes(cm.new_chat_member?.status);
+  if (!wasActive && isActive) {
+    await sendTelegram(env, WELCOME_TEXT, null, cm.chat?.id);
+  }
+}
+
 async function handleTelegramUpdate(env, update) {
+  await handleChatMemberUpdate(env, update);
+
   const msg = update.message;
   if (!msg || !msg.text) return;
   const chatId = String(msg.chat?.id || "");
@@ -152,7 +239,39 @@ async function handleTelegramUpdate(env, update) {
     } else {
       await sendTelegram(env, `Not on watchlist: ${code}`, msgId);
     }
-  } else if (cmd === "/list") {
+  } else if (cmd === "/info") {
+    const watchlist = await loadWatchlist(env);
+    const catalog = await getCatalog();
+
+    if (!arg) {
+      // /info with no arg -> every film currently on the watchlist
+      const codes = Object.keys(watchlist);
+      if (!codes.length) {
+        await sendTelegram(env, "Watchlist is empty. Use /movies then /watch first.", msgId);
+        return;
+      }
+      const status = await getBookingStatus(codes);
+      const blocks = codes.map((code) =>
+        formatFilmInfo(code, catalog.find((e) => e.code === code), watchlist[code], status[code])
+      );
+      await sendTelegram(env, blocks.join("\n\n"), msgId);
+    } else {
+      const lastMovieList = (await env.WATCHLIST_KV.get("last_movie_list", "json")) || [];
+      const resolved = resolveWatchTarget(arg, lastMovieList, catalog);
+      if (!resolved) {
+        await sendTelegram(env, "Couldn't resolve that. Try /movies <search> first, then /info <number>.", msgId);
+      } else {
+        const status = await getBookingStatus([resolved.code]);
+        const block = formatFilmInfo(
+          resolved.code,
+          catalog.find((e) => e.code === resolved.code),
+          watchlist[resolved.code],
+          status[resolved.code]
+        );
+        await sendTelegram(env, block, msgId);
+      }
+    }
+  } else if (cmd === "/watchlist") {
     const watchlist = await loadWatchlist(env);
     const codes = Object.keys(watchlist);
     if (codes.length) {
@@ -162,7 +281,7 @@ async function handleTelegramUpdate(env, update) {
       await sendTelegram(env, "Watchlist is empty.", msgId);
     }
   } else if (cmd === "/start") {
-    await sendTelegram(env, "Planet Cinema bot ready. Try /movies <search> or /imax <search>, then /watch <number> [imax], /unwatch <code>, /list.", msgId);
+    await sendTelegram(env, WELCOME_TEXT, msgId);
   }
 }
 
