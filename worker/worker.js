@@ -80,21 +80,25 @@ function formatFilmInfo(code, catalogEntry, watchEntry, status) {
   const lines = [`${name} (${code})`];
   if (catalogEntry?.dateStarted) lines.push(`תאריך בכורה: ${catalogEntry.dateStarted.slice(0, 10)}`);
   lines.push(`IMAX בעולם: ${catalogEntry?.attributes?.includes("imax") ? "כן" : "לא ידוע/לא"}`);
+  const bookingLink = (date) =>
+    catalogEntry?.url
+      ? `${catalogEntry.url}#/buy-tickets-by-film?for-movie=${code}&in-cinema=${CINEMA_ID}&at=${date}&view-mode=list`
+      : null;
+
   if (status.anyDates.length) {
     lines.push(`ניתן להזמין (ראשון לציון): ${status.anyDates[0]} עד ${status.anyDates[status.anyDates.length - 1]}`);
-    if (catalogEntry?.url) {
-      const bookingUrl = `${catalogEntry.url}#/buy-tickets-by-film?for-movie=${code}&in-cinema=${CINEMA_ID}&at=${status.anyDates[0]}&view-mode=list`;
-      lines.push(`הזמנה: ${bookingUrl}`);
-    }
   } else {
     lines.push("עדיין לא ניתן להזמין (ראשון לציון)");
   }
   if (status.imaxDates.length) {
-    lines.push(`תאריכי IMAX זמינים: ${status.imaxDates.join(", ")}`);
-    if (catalogEntry?.url) {
-      const imaxUrl = `${catalogEntry.url}#/buy-tickets-by-film?for-movie=${code}&in-cinema=${CINEMA_ID}&at=${status.imaxDates[0]}&view-mode=list`;
-      lines.push(`הזמנת IMAX: ${imaxUrl}`);
-    }
+    lines.push(`תאריכי IMAX: ${status.imaxDates[0]} עד ${status.imaxDates[status.imaxDates.length - 1]}`);
+  }
+
+  // Only one link is useful; prefer an IMAX-dated link if it exists.
+  const linkDate = status.imaxDates[0] || status.anyDates[0];
+  if (linkDate) {
+    const link = bookingLink(linkDate);
+    if (link) lines.push(`הזמנה: ${link}`);
   }
   if (watchEntry) {
     lines.push(`ברשימת המעקב שלך${watchEntry.imax ? " (רק IMAX)" : ""}`);
