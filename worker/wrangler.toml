@@ -1,0 +1,7 @@
+name = "planetcinema-bot"
+main = "worker.js"
+compatibility_date = "2026-01-01"
+
+[[kv_namespaces]]
+binding = "WATCHLIST_KV"
+id = "c7a6491f44a447729794fed42521bc39"
