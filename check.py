@@ -23,6 +23,7 @@ and it prints only what's NEW since the last run.
 import json
 import os
 import sys
+import urllib.parse
 import urllib.request
 from datetime import date, timedelta
 
@@ -76,6 +77,24 @@ def save_state(state):
         json.dump(state, f, ensure_ascii=False, indent=2)
 
 
+def send_telegram(text):
+    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+    if not token or not chat_id:
+        print("(no TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID set, skipping push)", file=sys.stderr)
+        return
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
+    # Telegram messages cap at 4096 chars; chunk if needed.
+    for i in range(0, len(text), 3500):
+        chunk = text[i:i + 3500]
+        data = urllib.parse.urlencode({"chat_id": chat_id, "text": chunk}).encode()
+        req = urllib.request.Request(url, data=data, method="POST")
+        try:
+            urllib.request.urlopen(req, timeout=15).read()
+        except Exception as e:
+            print(f"! telegram send failed: {e}", file=sys.stderr)
+
+
 def main():
     state = load_state()
     new_events = []
@@ -127,7 +146,9 @@ def main():
     save_state(state)
 
     if new_events:
-        print("\n".join(new_events))
+        message = "\n".join(new_events)
+        print(message)
+        send_telegram(message)
     else:
         print("No changes since last check.")
 
