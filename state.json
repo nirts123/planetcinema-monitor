@@ -1,10 +1,6 @@
 {
   "feeds": {
     "coming-soon": {
-      "8326s2r": {
-        "featureTitle": "מאבדים שליטה",
-        "url": "https://www.planetcinema.co.il/films/rolling-loud/8326s2r"
-      },
       "8105s2r": {
         "featureTitle": "חולית: חלק שלישי",
         "url": "https://www.planetcinema.co.il/films/dune-part-three/8105s2r"
@@ -64,6 +60,10 @@
       "8221s2r": {
         "featureTitle": "דיגר",
         "url": "https://www.planetcinema.co.il/films/digger/8221s2r"
+      },
+      "8326s2r": {
+        "featureTitle": "מאבדים שליטה",
+        "url": "https://www.planetcinema.co.il/films/rolling-loud/8326s2r"
       },
       "8244s2r": {
         "featureTitle": "תעתוע",
