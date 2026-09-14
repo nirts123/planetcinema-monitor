@@ -5,30 +5,6 @@
         "featureTitle": "חולית: חלק שלישי",
         "url": "https://www.planetcinema.co.il/films/dune-part-three/8105s2r"
       },
-      "8482s2r": {
-        "featureTitle": "בעבודה",
-        "url": "https://www.planetcinema.co.il/films/at-work/8482s2r"
-      },
-      "8459s2r": {
-        "featureTitle": "האויב שבפנים",
-        "url": "https://www.planetcinema.co.il/films/resident-evil/8459s2r"
-      },
-      "8503s2r": {
-        "featureTitle": "להתאהב בטוסקנה",
-        "url": "https://www.planetcinema.co.il/films/before-we-leave-tuscany/8503s2r"
-      },
-      "8366s2r": {
-        "featureTitle": "מהיר ועצבני - חגיגות 25 שנה",
-        "url": "https://www.planetcinema.co.il/films/fast-and-the-furious-25th-anniversary/8366s2r"
-      },
-      "8325s2r": {
-        "featureTitle": "ראנר",
-        "url": "https://www.planetcinema.co.il/films/runner/8325s2r"
-      },
-      "8423s2r": {
-        "featureTitle": "תלויה באוויר 2",
-        "url": "https://www.planetcinema.co.il/films/fall-2/8423s2r"
-      },
       "8485s2r1": {
         "featureTitle": "Heart of the Beast - СЕРДЦЕ ЗВЕРЯ",
         "url": "https://www.planetcinema.co.il/films/heart-of-the-beast-/8485s2r1"
@@ -40,14 +16,6 @@
       "8551s2r": {
         "featureTitle": "בחורים טובים 3",
         "url": "https://www.planetcinema.co.il/films/matchmaking-3/8551s2r"
-      },
-      "8485s2r": {
-        "featureTitle": "בלב הפרא",
-        "url": "https://www.planetcinema.co.il/films/heart-of-the-beast/8485s2r"
-      },
-      "8095d2r": {
-        "featureTitle": "האי הנעלם",
-        "url": "https://www.planetcinema.co.il/films/forgotten-island/8095d2r"
       },
       "7685d2r": {
         "featureTitle": "וונדר-דוג",
@@ -135,6 +103,14 @@
         "featureTitle": "Oasis: Don't Look Back In Anger",
         "url": "https://www.planetcinema.co.il/films/oasis-dont-look-back-in-anger/8425s2i"
       },
+      "8485s2r": {
+        "featureTitle": "בלב הפרא",
+        "url": "https://www.planetcinema.co.il/films/heart-of-the-beast/8485s2r"
+      },
+      "8095d2r": {
+        "featureTitle": "האי הנעלם",
+        "url": "https://www.planetcinema.co.il/films/forgotten-island/8095d2r"
+      },
       "8469s2r": {
         "featureTitle": "הנוקמים: סוף המשחק - הדרן",
         "url": "https://www.planetcinema.co.il/films/avengers-endgame-re-release/8469s2r"
@@ -142,6 +118,30 @@
       "8469s2riv": {
         "featureTitle": "הנוקמים: סוף המשחק - הדרן -  Infinity Vi",
         "url": "https://www.planetcinema.co.il/films/avengers-endgame-re-release-infinity-vision/8469s2riv"
+      },
+      "8482s2r": {
+        "featureTitle": "בעבודה",
+        "url": "https://www.planetcinema.co.il/films/at-work/8482s2r"
+      },
+      "8459s2r": {
+        "featureTitle": "האויב שבפנים",
+        "url": "https://www.planetcinema.co.il/films/resident-evil/8459s2r"
+      },
+      "8503s2r": {
+        "featureTitle": "להתאהב בטוסקנה",
+        "url": "https://www.planetcinema.co.il/films/before-we-leave-tuscany/8503s2r"
+      },
+      "8366s2r": {
+        "featureTitle": "מהיר ועצבני - חגיגות 25 שנה",
+        "url": "https://www.planetcinema.co.il/films/fast-and-the-furious-25th-anniversary/8366s2r"
+      },
+      "8325s2r": {
+        "featureTitle": "ראנר",
+        "url": "https://www.planetcinema.co.il/films/runner/8325s2r"
+      },
+      "8423s2r": {
+        "featureTitle": "תלויה באוויר 2",
+        "url": "https://www.planetcinema.co.il/films/fall-2/8423s2r"
       },
       "8461s2r": {
         "featureTitle": "איש החידות",
@@ -199,6 +199,10 @@
         "featureTitle": "כוכבי כלב",
         "url": "https://www.planetcinema.co.il/films/dog-stars/7944s2r"
       },
+      "8093d2r1": {
+        "featureTitle": "ЩЕНЯЧИЙ ПАТРУЛЬ: ДИНОФИЛЬМ - Paw Patrol:",
+        "url": "https://www.planetcinema.co.il/films/8093d2r1/8093d2r1"
+      },
       "7942d2r": {
         "featureTitle": "דג ושמו באסה",
         "url": "https://www.planetcinema.co.il/films/the-pout-pout-fish/7942d2r"
@@ -222,6 +226,10 @@
       "8352s2r": {
         "featureTitle": "קיוטי נגד אקמי",
         "url": "https://www.planetcinema.co.il/films/coyote-vs-acme/8352s2r"
+      },
+      "8160s2r1": {
+        "featureTitle": "НА КРАЮ ОУК-СТРИТ- End of Oak street",
+        "url": "https://www.planetcinema.co.il/films/8160s2r1/8160s2r1"
       },
       "8375s2r": {
         "featureTitle": "בחזרה מההימלאיה",
@@ -259,6 +267,10 @@
         "featureTitle": "מפרץ ההרפתקאות: אי הדינוזאורים",
         "url": "https://www.planetcinema.co.il/films/paw-patrol-the-dino-movie/8093d2r"
       },
+      "7941s2r": {
+        "featureTitle": "מרסופילאמי",
+        "url": "https://www.planetcinema.co.il/films/marsupilami/7941s2r"
+      },
       "7622d2r": {
         "featureTitle": "פרנקי והמפלצות",
         "url": "https://www.planetcinema.co.il/films/stitch-head/7622d2r"
@@ -270,6 +282,10 @@
       "8085s2r": {
         "featureTitle": "ספיידרמן: יום חדש",
         "url": "https://www.planetcinema.co.il/films/spider-man-brand-new-day/8085s2r"
+      },
+      "6628d2r": {
+        "featureTitle": "גרייסי ופדרו: חיות המחמד בפעולה",
+        "url": "https://www.planetcinema.co.il/films/gracie-pedro-pets-to-the-rescue/6628d2r"
       },
       "7541d2r": {
         "featureTitle": "טפיטי: הרפתקה במדבר",
@@ -286,6 +302,10 @@
       "7460s2r": {
         "featureTitle": "האודיסאה",
         "url": "https://www.planetcinema.co.il/films/the-odyssey/7460s2r"
+      },
+      "8046d2r": {
+        "featureTitle": "מאשה והדוב-ההרפתקה הגדולה",
+        "url": "https://www.planetcinema.co.il/films/masha-the-bear-wonder-park/8046d2r"
       },
       "8223s2r": {
         "featureTitle": "סולטיז הסרט - וולוג ה-100",
@@ -341,12 +361,18 @@
     "private:1072:7460s2r": [
       "2026-09-14",
       "2026-09-15",
-      "2026-09-16"
+      "2026-09-16",
+      "2026-09-17",
+      "2026-09-18",
+      "2026-09-19"
     ],
     "group:1072:7460s2r": [
       "2026-09-14",
       "2026-09-15",
-      "2026-09-16"
+      "2026-09-16",
+      "2026-09-17",
+      "2026-09-18",
+      "2026-09-19"
     ]
   },
   "telegram_offset": 429356933,
