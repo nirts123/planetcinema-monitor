@@ -130,9 +130,9 @@ function searchCatalog(catalog, query) {
   );
 }
 
-function formatMovieList(entries) {
+function formatMovieList(entries, realImaxCodes) {
   return entries
-    .map((e, i) => `${i + 1}. ${e.featureTitle}${e.attributes.includes("imax") ? ltr(" [IMAX]") : ""}`)
+    .map((e, i) => `${i + 1}. ${e.featureTitle}${realImaxCodes.has(e.code) ? ltr(" [IMAX]") : ""}`)
     .join("\n");
 }
 
@@ -249,16 +249,21 @@ async function handleTelegramUpdate(env, update) {
 
   if (cmd === "/movies" || cmd === "/imax") {
     const catalog = await getCatalog();
-    const pool = cmd === "/imax" ? catalog.filter((e) => e.attributes.includes("imax")) : catalog;
+    // The catalog feed's "imax" tag means "has an IMAX release somewhere in
+    // the chain", not "playing in IMAX at Rishon LeZion" - check the actual
+    // per-cinema schedule instead so /imax and the [IMAX] tag are accurate.
+    const status = await getBookingStatus(catalog.map((e) => e.code));
+    const realImaxCodes = new Set(catalog.filter((e) => status[e.code].imaxDates.length).map((e) => e.code));
+    const pool = cmd === "/imax" ? catalog.filter((e) => realImaxCodes.has(e.code)) : catalog;
     const results = searchCatalog(pool, arg);
     await env.WATCHLIST_KV.put(
       `last_movie_list:${chatId}`,
       JSON.stringify(results.map((e) => ({ code: e.code, featureTitle: e.featureTitle })))
     );
     if (results.length) {
-      await sendTelegram(env, `${formatMovieList(results)}\n\nלדוגמה: ${ltr("/watch 3")} או ${ltr("/watch 3 imax")}`, msgId, chatId);
+      await sendTelegram(env, `${formatMovieList(results, realImaxCodes)}\n\nלדוגמה: ${ltr("/watch 3")} או ${ltr("/watch 3 imax")}`, msgId, chatId);
     } else {
-      await sendTelegram(env, cmd === "/imax" ? "לא נמצאו סרטי IMAX." : "לא נמצאו סרטים מתאימים.", msgId, chatId);
+      await sendTelegram(env, cmd === "/imax" ? "לא נמצאו סרטי IMAX בראשון לציון בטווח הקרוב." : "לא נמצאו סרטים מתאימים.", msgId, chatId);
     }
   } else if (cmd === "/watch" && arg) {
     const catalog = await getCatalog();
