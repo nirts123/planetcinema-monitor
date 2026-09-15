@@ -13,10 +13,6 @@
         "featureTitle": "אספן המשאלות",
         "url": "https://www.planetcinema.co.il/films/land-of-someitmes/8484s2r"
       },
-      "8551s2r": {
-        "featureTitle": "בחורים טובים 3",
-        "url": "https://www.planetcinema.co.il/films/matchmaking-3/8551s2r"
-      },
       "7685d2r": {
         "featureTitle": "וונדר-דוג",
         "url": "https://www.planetcinema.co.il/films/charlie-the-wonderdog/7685d2r"
@@ -102,6 +98,10 @@
       "8425s2i": {
         "featureTitle": "Oasis: Don't Look Back In Anger",
         "url": "https://www.planetcinema.co.il/films/oasis-dont-look-back-in-anger/8425s2i"
+      },
+      "8551s2r": {
+        "featureTitle": "בחורים טובים 3",
+        "url": "https://www.planetcinema.co.il/films/matchmaking-3/8551s2r"
       },
       "8485s2r": {
         "featureTitle": "בלב הפרא",
