@@ -5,14 +5,6 @@
         "featureTitle": "חולית: חלק שלישי",
         "url": "https://www.planetcinema.co.il/films/dune-part-three/8105s2r"
       },
-      "8199s2r": {
-        "featureTitle": "יתום",
-        "url": "https://www.planetcinema.co.il/films/orphan/8199s2r"
-      },
-      "8029d2r": {
-        "featureTitle": "מרגלים מהאגדות",
-        "url": "https://www.planetcinema.co.il/films/spinned/8029d2r"
-      },
       "8325s2r1": {
         "featureTitle": "RUNNER - КУРЬЕР",
         "url": "https://www.planetcinema.co.il/films/8325s2r1/8325s2r1"
@@ -118,6 +110,14 @@
       "7685d2r": {
         "featureTitle": "וונדר-דוג",
         "url": "https://www.planetcinema.co.il/films/charlie-the-wonderdog/7685d2r"
+      },
+      "8199s2r": {
+        "featureTitle": "יתום",
+        "url": "https://www.planetcinema.co.il/films/orphan/8199s2r"
+      },
+      "8029d2r": {
+        "featureTitle": "מרגלים מהאגדות",
+        "url": "https://www.planetcinema.co.il/films/spinned/8029d2r"
       },
       "8036s2r": {
         "featureTitle": "פרימוורה",
