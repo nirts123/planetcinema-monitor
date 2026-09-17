@@ -5,18 +5,6 @@
         "featureTitle": "חולית: חלק שלישי",
         "url": "https://www.planetcinema.co.il/films/dune-part-three/8105s2r"
       },
-      "8485s2r1": {
-        "featureTitle": "Heart of the Beast - СЕРДЦЕ ЗВЕРЯ",
-        "url": "https://www.planetcinema.co.il/films/heart-of-the-beast-/8485s2r1"
-      },
-      "8484s2r": {
-        "featureTitle": "אספן המשאלות",
-        "url": "https://www.planetcinema.co.il/films/land-of-someitmes/8484s2r"
-      },
-      "7685d2r": {
-        "featureTitle": "וונדר-דוג",
-        "url": "https://www.planetcinema.co.il/films/charlie-the-wonderdog/7685d2r"
-      },
       "8199s2r": {
         "featureTitle": "יתום",
         "url": "https://www.planetcinema.co.il/films/orphan/8199s2r"
@@ -24,14 +12,6 @@
       "8029d2r": {
         "featureTitle": "מרגלים מהאגדות",
         "url": "https://www.planetcinema.co.il/films/spinned/8029d2r"
-      },
-      "8036s2r": {
-        "featureTitle": "פרימוורה",
-        "url": "https://www.planetcinema.co.il/films/primavera/8036s2r"
-      },
-      "8504s2r": {
-        "featureTitle": "קרולרס",
-        "url": "https://www.planetcinema.co.il/films/crawlers/8504s2r"
       },
       "8325s2r1": {
         "featureTitle": "RUNNER - КУРЬЕР",
@@ -48,10 +28,6 @@
       "8326s2r": {
         "featureTitle": "מאבדים שליטה",
         "url": "https://www.planetcinema.co.il/films/rolling-loud/8326s2r"
-      },
-      "8244s2r": {
-        "featureTitle": "תעתוע",
-        "url": "https://www.planetcinema.co.il/films/verity/8244s2r"
       },
       "8330s2r": {
         "featureTitle": "החשבון החברתי",
@@ -107,6 +83,18 @@
         "featureTitle": "מהיר ועצבני - חגיגות 25 שנה",
         "url": "https://www.planetcinema.co.il/films/fast-and-the-furious-25th-anniversary/8366s2r"
       },
+      "8244s2r": {
+        "featureTitle": "תעתוע",
+        "url": "https://www.planetcinema.co.il/films/verity/8244s2r"
+      },
+      "8485s2r1": {
+        "featureTitle": "Heart of the Beast - СЕРДЦЕ ЗВЕРЯ",
+        "url": "https://www.planetcinema.co.il/films/heart-of-the-beast-/8485s2r1"
+      },
+      "8484s2r": {
+        "featureTitle": "אספן המשאלות",
+        "url": "https://www.planetcinema.co.il/films/land-of-someitmes/8484s2r"
+      },
       "8551s2r": {
         "featureTitle": "בחורים טובים 3",
         "url": "https://www.planetcinema.co.il/films/matchmaking-3/8551s2r"
@@ -126,6 +114,18 @@
       "8469s2riv": {
         "featureTitle": "הנוקמים: סוף המשחק - הדרן -  Infinity Vi",
         "url": "https://www.planetcinema.co.il/films/avengers-endgame-re-release-infinity-vision/8469s2riv"
+      },
+      "7685d2r": {
+        "featureTitle": "וונדר-דוג",
+        "url": "https://www.planetcinema.co.il/films/charlie-the-wonderdog/7685d2r"
+      },
+      "8036s2r": {
+        "featureTitle": "פרימוורה",
+        "url": "https://www.planetcinema.co.il/films/primavera/8036s2r"
+      },
+      "8504s2r": {
+        "featureTitle": "קרולרס",
+        "url": "https://www.planetcinema.co.il/films/crawlers/8504s2r"
       },
       "8482s2r": {
         "featureTitle": "בעבודה",
