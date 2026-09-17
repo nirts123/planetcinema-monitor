@@ -33,9 +33,17 @@
         "featureTitle": "קרולרס",
         "url": "https://www.planetcinema.co.il/films/crawlers/8504s2r"
       },
+      "8325s2r1": {
+        "featureTitle": "RUNNER - КУРЬЕР",
+        "url": "https://www.planetcinema.co.il/films/8325s2r1/8325s2r1"
+      },
       "8221s2r": {
         "featureTitle": "דיגר",
         "url": "https://www.planetcinema.co.il/films/digger/8221s2r"
+      },
+      "8354s2r": {
+        "featureTitle": "הגיהנום שבפנים",
+        "url": "https://www.planetcinema.co.il/films/her-private-hell/8354s2r"
       },
       "8326s2r": {
         "featureTitle": "מאבדים שליטה",
@@ -95,6 +103,10 @@
       }
     },
     "now-playing": {
+      "8366s2r": {
+        "featureTitle": "מהיר ועצבני - חגיגות 25 שנה",
+        "url": "https://www.planetcinema.co.il/films/fast-and-the-furious-25th-anniversary/8366s2r"
+      },
       "8551s2r": {
         "featureTitle": "בחורים טובים 3",
         "url": "https://www.planetcinema.co.il/films/matchmaking-3/8551s2r"
@@ -126,10 +138,6 @@
       "8503s2r": {
         "featureTitle": "להתאהב בטוסקנה",
         "url": "https://www.planetcinema.co.il/films/before-we-leave-tuscany/8503s2r"
-      },
-      "8366s2r": {
-        "featureTitle": "מהיר ועצבני - חגיגות 25 שנה",
-        "url": "https://www.planetcinema.co.il/films/fast-and-the-furious-25th-anniversary/8366s2r"
       },
       "8325s2r": {
         "featureTitle": "ראנר",
