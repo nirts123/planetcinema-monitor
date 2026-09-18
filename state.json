@@ -5,10 +5,6 @@
         "featureTitle": "חולית: חלק שלישי",
         "url": "https://www.planetcinema.co.il/films/dune-part-three/8105s2r"
       },
-      "8325s2r1": {
-        "featureTitle": "RUNNER - КУРЬЕР",
-        "url": "https://www.planetcinema.co.il/films/8325s2r1/8325s2r1"
-      },
       "8221s2r": {
         "featureTitle": "דיגר",
         "url": "https://www.planetcinema.co.il/films/digger/8221s2r"
@@ -78,6 +74,10 @@
       "8244s2r": {
         "featureTitle": "תעתוע",
         "url": "https://www.planetcinema.co.il/films/verity/8244s2r"
+      },
+      "8325s2r1": {
+        "featureTitle": "RUNNER - КУРЬЕР",
+        "url": "https://www.planetcinema.co.il/films/8325s2r1/8325s2r1"
       },
       "8485s2r1": {
         "featureTitle": "Heart of the Beast - СЕРДЦЕ ЗВЕРЯ",
