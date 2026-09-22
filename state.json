@@ -215,10 +215,6 @@
         "featureTitle": "נקמה בלב ים",
         "url": "https://www.planetcinema.co.il/films/mutiny/8295s2r"
       },
-      "7418s2r": {
-        "featureTitle": "צריך שניים לטנגו",
-        "url": "https://www.planetcinema.co.il/films/it-takes-two-to-tango/7418s2r"
-      },
       "8352s2r": {
         "featureTitle": "קיוטי נגד אקמי",
         "url": "https://www.planetcinema.co.il/films/coyote-vs-acme/8352s2r"
@@ -339,7 +335,6 @@
     ],
     "1072:8105s2r": [],
     "private:1072:7460s2r": [
-      "2026-09-22",
       "2026-09-23",
       "2026-09-24",
       "2026-09-25",
