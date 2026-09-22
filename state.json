@@ -171,10 +171,6 @@
         "featureTitle": "קסם מעשי 2",
         "url": "https://www.planetcinema.co.il/films/practical-magic-2/8220s2r"
       },
-      "8460s2r": {
-        "featureTitle": "לה טראוויאטה - אופרה בקולנוע",
-        "url": "https://www.planetcinema.co.il/films/la-traviata/8460s2r"
-      },
       "8462s2r": {
         "featureTitle": "אדיוטים",
         "url": "https://www.planetcinema.co.il/films/idiots/8462s2r"
@@ -357,7 +353,15 @@
       "2026-09-29",
       "2026-09-30"
     ],
-    "group:1072:7460s2r": []
+    "group:1072:7460s2r": [
+      "2026-09-24",
+      "2026-09-25",
+      "2026-09-26",
+      "2026-09-27",
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30"
+    ]
   },
   "telegram_offset": 429356933,
   "last_movie_list": [
