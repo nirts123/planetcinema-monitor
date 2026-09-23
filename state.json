@@ -73,6 +73,10 @@
         "featureTitle": "הנוקמים: עלייתו של ד\"ר דום",
         "url": "https://www.planetcinema.co.il/films/avengers-doomsday/7879s2r"
       },
+      "7879s2r1": {
+        "featureTitle": "הנוקמים: עלייתו של ד\"ר דום - Infinity Vi",
+        "url": "https://www.planetcinema.co.il/films/avengers-doomsday-infinity-vision/7879s2r1"
+      },
       "8392s2r": {
         "featureTitle": "אנגרי בירדס הסרט 3",
         "url": "https://www.planetcinema.co.il/films/the-angry-birds-movie-3/8392s2r"
@@ -83,9 +87,13 @@
       }
     },
     "now-playing": {
-      "8366s2r": {
-        "featureTitle": "מהיר ועצבני - חגיגות 25 שנה",
-        "url": "https://www.planetcinema.co.il/films/fast-and-the-furious-25th-anniversary/8366s2r"
+      "8551s2r": {
+        "featureTitle": "בחורים טובים 3",
+        "url": "https://www.planetcinema.co.il/films/matchmaking-3/8551s2r"
+      },
+      "8095d2r": {
+        "featureTitle": "האי הנעלם",
+        "url": "https://www.planetcinema.co.il/films/forgotten-island/8095d2r"
       },
       "8244s2r": {
         "featureTitle": "תעתוע",
@@ -103,17 +111,9 @@
         "featureTitle": "אספן המשאלות",
         "url": "https://www.planetcinema.co.il/films/land-of-someitmes/8484s2r"
       },
-      "8551s2r": {
-        "featureTitle": "בחורים טובים 3",
-        "url": "https://www.planetcinema.co.il/films/matchmaking-3/8551s2r"
-      },
       "8485s2r": {
         "featureTitle": "בלב הפרא",
         "url": "https://www.planetcinema.co.il/films/heart-of-the-beast/8485s2r"
-      },
-      "8095d2r": {
-        "featureTitle": "האי הנעלם",
-        "url": "https://www.planetcinema.co.il/films/forgotten-island/8095d2r"
       },
       "8469s2r": {
         "featureTitle": "הנוקמים: סוף המשחק - הדרן",
@@ -155,6 +155,10 @@
         "featureTitle": "להתאהב בטוסקנה",
         "url": "https://www.planetcinema.co.il/films/before-we-leave-tuscany/8503s2r"
       },
+      "8366s2r": {
+        "featureTitle": "מהיר ועצבני - חגיגות 25 שנה",
+        "url": "https://www.planetcinema.co.il/films/fast-and-the-furious-25th-anniversary/8366s2r"
+      },
       "8325s2r": {
         "featureTitle": "ראנר",
         "url": "https://www.planetcinema.co.il/films/runner/8325s2r"
@@ -194,10 +198,6 @@
       "8462s2r": {
         "featureTitle": "אדיוטים",
         "url": "https://www.planetcinema.co.il/films/idiots/8462s2r"
-      },
-      "8320s2r": {
-        "featureTitle": "בכל מחיר",
-        "url": "https://www.planetcinema.co.il/films/by-any-means/8320s2r"
       },
       "8440s2r": {
         "featureTitle": "מה שמריאל יודעת",
@@ -246,10 +246,6 @@
       "8375s2r": {
         "featureTitle": "בחזרה מההימלאיה",
         "url": "https://www.planetcinema.co.il/films/valley-of-shadows/8375s2r"
-      },
-      "8386s2r": {
-        "featureTitle": "המשפחה האיטלקית שלי",
-        "url": "https://www.planetcinema.co.il/films/damned-if-you-do-damned-if-you-dont/8386s2r"
       },
       "8184s2r": {
         "featureTitle": "לגמור את הלילה",
