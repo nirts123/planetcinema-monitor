@@ -5,6 +5,10 @@
         "featureTitle": "חולית: חלק שלישי",
         "url": "https://www.planetcinema.co.il/films/dune-part-three/8105s2r"
       },
+      "8221s2r1": {
+        "featureTitle": "ДИГГЕР - Digger",
+        "url": "https://www.planetcinema.co.il/films/digger/8221s2r1"
+      },
       "8221s2r": {
         "featureTitle": "דיגר",
         "url": "https://www.planetcinema.co.il/films/digger/8221s2r"
@@ -17,9 +21,21 @@
         "featureTitle": "מאבדים שליטה",
         "url": "https://www.planetcinema.co.il/films/rolling-loud/8326s2r"
       },
+      "8578s2r": {
+        "featureTitle": "מאדאם באטרפליי  - אופרה בקולנוע",
+        "url": "https://www.planetcinema.co.il/films/madama-butterfly/8578s2r"
+      },
+      "7141s2r": {
+        "featureTitle": "גלים של תקווה",
+        "url": "https://www.planetcinema.co.il/films/waves/7141s2r"
+      },
       "8330s2r": {
         "featureTitle": "החשבון החברתי",
         "url": "https://www.planetcinema.co.il/films/the-social-reckoning/8330s2r"
+      },
+      "8016s2r": {
+        "featureTitle": "מי בעד",
+        "url": "https://www.planetcinema.co.il/films/all-in-favor/8016s2r"
       },
       "8505s2r": {
         "featureTitle": "מפרץ האימה",
@@ -171,6 +187,10 @@
         "featureTitle": "קסם מעשי 2",
         "url": "https://www.planetcinema.co.il/films/practical-magic-2/8220s2r"
       },
+      "8460s2r": {
+        "featureTitle": "לה טראוויאטה - אופרה בקולנוע",
+        "url": "https://www.planetcinema.co.il/films/la-traviata/8460s2r"
+      },
       "8462s2r": {
         "featureTitle": "אדיוטים",
         "url": "https://www.planetcinema.co.il/films/idiots/8462s2r"
@@ -231,10 +251,6 @@
         "featureTitle": "המשפחה האיטלקית שלי",
         "url": "https://www.planetcinema.co.il/films/damned-if-you-do-damned-if-you-dont/8386s2r"
       },
-      "8230s2r": {
-        "featureTitle": "חג מולד מר",
-        "url": "https://www.planetcinema.co.il/films/bitter-christmas/8230s2r"
-      },
       "8184s2r": {
         "featureTitle": "לגמור את הלילה",
         "url": "https://www.planetcinema.co.il/films/one-night-only/8184s2r"
@@ -263,10 +279,6 @@
         "featureTitle": "ספיידרמן: יום חדש",
         "url": "https://www.planetcinema.co.il/films/spider-man-brand-new-day/8085s2r"
       },
-      "6628d2r": {
-        "featureTitle": "גרייסי ופדרו: חיות המחמד בפעולה",
-        "url": "https://www.planetcinema.co.il/films/gracie-pedro-pets-to-the-rescue/6628d2r"
-      },
       "7541d2r": {
         "featureTitle": "טפיטי: הרפתקה במדבר",
         "url": "https://www.planetcinema.co.il/films/tafiti-across-the-desert/7541d2r"
@@ -282,14 +294,6 @@
       "7460s2r": {
         "featureTitle": "האודיסאה",
         "url": "https://www.planetcinema.co.il/films/the-odyssey/7460s2r"
-      },
-      "8046d2r": {
-        "featureTitle": "מאשה והדוב-ההרפתקה הגדולה",
-        "url": "https://www.planetcinema.co.il/films/masha-the-bear-wonder-park/8046d2r"
-      },
-      "8200s2r": {
-        "featureTitle": "ההזמנה",
-        "url": "https://www.planetcinema.co.il/films/the-invite/8200s2r"
       },
       "7794s2r": {
         "featureTitle": "מואנה לייב אקשן",
