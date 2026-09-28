@@ -5,29 +5,17 @@
         "featureTitle": "הנוקמים: עלייתו של ד\"ר דום - Infinity Vi",
         "url": "https://www.planetcinema.co.il/films/avengers-doomsday-infinity-vision/7879s2r1"
       },
+      "8590s2r": {
+        "featureTitle": "האהבות שלנו",
+        "url": "https://www.planetcinema.co.il/films/our-loves/8590s2r"
+      },
       "8105s2r": {
         "featureTitle": "חולית: חלק שלישי",
         "url": "https://www.planetcinema.co.il/films/dune-part-three/8105s2r"
       },
-      "8221s2r1": {
-        "featureTitle": "ДИГГЕР - Digger",
-        "url": "https://www.planetcinema.co.il/films/digger/8221s2r1"
-      },
-      "8221s2r": {
-        "featureTitle": "דיגר",
-        "url": "https://www.planetcinema.co.il/films/digger/8221s2r"
-      },
-      "8354s2r": {
-        "featureTitle": "הגיהנום שבפנים",
-        "url": "https://www.planetcinema.co.il/films/her-private-hell/8354s2r"
-      },
       "8326s2r": {
         "featureTitle": "מאבדים שליטה",
         "url": "https://www.planetcinema.co.il/films/rolling-loud/8326s2r"
-      },
-      "8578s2r": {
-        "featureTitle": "מאדאם באטרפליי  - אופרה בקולנוע",
-        "url": "https://www.planetcinema.co.il/films/madama-butterfly/8578s2r"
       },
       "8328s2r": {
         "featureTitle": "אין כמו אמא",
@@ -56,10 +44,6 @@
       "8505s2r": {
         "featureTitle": "מפרץ האימה",
         "url": "https://www.planetcinema.co.il/films/the-bay/8505s2r"
-      },
-      "8590s2r": {
-        "featureTitle": "האהבות שלנו",
-        "url": "https://www.planetcinema.co.il/films/our-loves/8590s2r"
       },
       "8585s2r": {
         "featureTitle": "משא כבד",
@@ -119,6 +103,22 @@
       }
     },
     "now-playing": {
+      "8578s2r": {
+        "featureTitle": "מאדאם באטרפליי  - אופרה בקולנוע",
+        "url": "https://www.planetcinema.co.il/films/madama-butterfly/8578s2r"
+      },
+      "8221s2r1": {
+        "featureTitle": "ДИГГЕР - Digger",
+        "url": "https://www.planetcinema.co.il/films/digger/8221s2r1"
+      },
+      "8221s2r": {
+        "featureTitle": "דיגר",
+        "url": "https://www.planetcinema.co.il/films/digger/8221s2r"
+      },
+      "8354s2r": {
+        "featureTitle": "הגיהנום שבפנים",
+        "url": "https://www.planetcinema.co.il/films/her-private-hell/8354s2r"
+      },
       "8244s2r": {
         "featureTitle": "תעתוע",
         "url": "https://www.planetcinema.co.il/films/verity/8244s2r"
@@ -227,6 +227,10 @@
         "featureTitle": "לה טראוויאטה - אופרה בקולנוע",
         "url": "https://www.planetcinema.co.il/films/la-traviata/8460s2r"
       },
+      "8462s2r": {
+        "featureTitle": "אדיוטים",
+        "url": "https://www.planetcinema.co.il/films/idiots/8462s2r"
+      },
       "8440s2r": {
         "featureTitle": "מה שמריאל יודעת",
         "url": "https://www.planetcinema.co.il/films/what-marielle-knows/8440s2r"
@@ -255,6 +259,10 @@
         "featureTitle": "בחזרה מההימלאיה",
         "url": "https://www.planetcinema.co.il/films/valley-of-shadows/8375s2r"
       },
+      "8386s2r": {
+        "featureTitle": "המשפחה האיטלקית שלי",
+        "url": "https://www.planetcinema.co.il/films/damned-if-you-do-damned-if-you-dont/8386s2r"
+      },
       "8403s2r": {
         "featureTitle": "גבעה 338",
         "url": "https://www.planetcinema.co.il/films/hill-338/8403s2r"
@@ -270,10 +278,6 @@
       "7622d2r": {
         "featureTitle": "פרנקי והמפלצות",
         "url": "https://www.planetcinema.co.il/films/stitch-head/7622d2r"
-      },
-      "8085s2r2": {
-        "featureTitle": "ЧЕЛОВЕК-ПАУК: НОВЫЙ ДЕНЬ - Spider-Man:",
-        "url": "https://www.planetcinema.co.il/films/8085s2r2/8085s2r2"
       },
       "8085s2r": {
         "featureTitle": "ספיידרמן: יום חדש",
@@ -314,11 +318,15 @@
       "8232s2r": {
         "featureTitle": "קופה ראשית",
         "url": "https://www.planetcinema.co.il/films/kupa-rashit/8232s2r"
+      },
+      "8134s2r": {
+        "featureTitle": "אובססיה",
+        "url": "https://www.planetcinema.co.il/films/obsession/8134s2r"
       }
     }
   },
   "horizon": {
-    "1072": "2026-09-30"
+    "1072": "2026-10-07"
   },
   "watch_seen": {
     "1072:7460s2r": [
@@ -333,7 +341,12 @@
     "private:1072:7460s2r": [
       "2026-09-28",
       "2026-09-29",
-      "2026-09-30"
+      "2026-09-30",
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-04",
+      "2026-10-05",
+      "2026-10-07"
     ],
     "group:1072:7460s2r": [
       "2026-09-28",
