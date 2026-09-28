@@ -1,6 +1,10 @@
 {
   "feeds": {
     "coming-soon": {
+      "7879s2r1": {
+        "featureTitle": "הנוקמים: עלייתו של ד\"ר דום - Infinity Vi",
+        "url": "https://www.planetcinema.co.il/films/avengers-doomsday-infinity-vision/7879s2r1"
+      },
       "8105s2r": {
         "featureTitle": "חולית: חלק שלישי",
         "url": "https://www.planetcinema.co.il/films/dune-part-three/8105s2r"
@@ -25,6 +29,10 @@
         "featureTitle": "מאדאם באטרפליי  - אופרה בקולנוע",
         "url": "https://www.planetcinema.co.il/films/madama-butterfly/8578s2r"
       },
+      "8328s2r": {
+        "featureTitle": "אין כמו אמא",
+        "url": "https://www.planetcinema.co.il/films/other-mommy/8328s2r"
+      },
       "7141s2r": {
         "featureTitle": "גלים של תקווה",
         "url": "https://www.planetcinema.co.il/films/waves/7141s2r"
@@ -33,13 +41,33 @@
         "featureTitle": "החשבון החברתי",
         "url": "https://www.planetcinema.co.il/films/the-social-reckoning/8330s2r"
       },
+      "8576s2r": {
+        "featureTitle": "הילדה השמאלית",
+        "url": "https://www.planetcinema.co.il/films/left-handed-girl/8576s2r"
+      },
       "8016s2r": {
         "featureTitle": "מי בעד",
         "url": "https://www.planetcinema.co.il/films/all-in-favor/8016s2r"
       },
+      "8361s2r": {
+        "featureTitle": "מעשיות מקבילות",
+        "url": "https://www.planetcinema.co.il/films/parallel-tales/8361s2r"
+      },
       "8505s2r": {
         "featureTitle": "מפרץ האימה",
         "url": "https://www.planetcinema.co.il/films/the-bay/8505s2r"
+      },
+      "8590s2r": {
+        "featureTitle": "האהבות שלנו",
+        "url": "https://www.planetcinema.co.il/films/our-loves/8590s2r"
+      },
+      "8585s2r": {
+        "featureTitle": "משא כבד",
+        "url": "https://www.planetcinema.co.il/films/the-weight/8585s2r"
+      },
+      "8333s2r": {
+        "featureTitle": "נפילת הלוויתן",
+        "url": "https://www.planetcinema.co.il/films/whalefall/8333s2r"
       },
       "8182s2r": {
         "featureTitle": "סטריט פייטר",
@@ -52,6 +80,14 @@
       "8222s2r": {
         "featureTitle": "קלייפייס",
         "url": "https://www.planetcinema.co.il/films/clayface/8222s2r"
+      },
+      "8263s2r": {
+        "featureTitle": "תמונות יפואיות 2",
+        "url": "https://www.planetcinema.co.il/films/jaffa-2/8263s2r"
+      },
+      "8577s2r": {
+        "featureTitle": "הבדחן",
+        "url": "https://www.planetcinema.co.il/films/the-wedding-entertainer-the-tale-of-moishe-badhan/8577s2r"
       },
       "8309s2r": {
         "featureTitle": "איך לשדוד בנק",
@@ -73,10 +109,6 @@
         "featureTitle": "הנוקמים: עלייתו של ד\"ר דום",
         "url": "https://www.planetcinema.co.il/films/avengers-doomsday/7879s2r"
       },
-      "7879s2r1": {
-        "featureTitle": "הנוקמים: עלייתו של ד\"ר דום - Infinity Vi",
-        "url": "https://www.planetcinema.co.il/films/avengers-doomsday-infinity-vision/7879s2r1"
-      },
       "8392s2r": {
         "featureTitle": "אנגרי בירדס הסרט 3",
         "url": "https://www.planetcinema.co.il/films/the-angry-birds-movie-3/8392s2r"
@@ -87,14 +119,6 @@
       }
     },
     "now-playing": {
-      "8551s2r": {
-        "featureTitle": "בחורים טובים 3",
-        "url": "https://www.planetcinema.co.il/films/matchmaking-3/8551s2r"
-      },
-      "8095d2r": {
-        "featureTitle": "האי הנעלם",
-        "url": "https://www.planetcinema.co.il/films/forgotten-island/8095d2r"
-      },
       "8244s2r": {
         "featureTitle": "תעתוע",
         "url": "https://www.planetcinema.co.il/films/verity/8244s2r"
@@ -111,9 +135,17 @@
         "featureTitle": "אספן המשאלות",
         "url": "https://www.planetcinema.co.il/films/land-of-someitmes/8484s2r"
       },
+      "8551s2r": {
+        "featureTitle": "בחורים טובים 3",
+        "url": "https://www.planetcinema.co.il/films/matchmaking-3/8551s2r"
+      },
       "8485s2r": {
         "featureTitle": "בלב הפרא",
         "url": "https://www.planetcinema.co.il/films/heart-of-the-beast/8485s2r"
+      },
+      "8095d2r": {
+        "featureTitle": "האי הנעלם",
+        "url": "https://www.planetcinema.co.il/films/forgotten-island/8095d2r"
       },
       "8469s2r": {
         "featureTitle": "הנוקמים: סוף המשחק - הדרן",
