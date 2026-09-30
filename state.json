@@ -13,10 +13,6 @@
         "featureTitle": "חולית: חלק שלישי",
         "url": "https://www.planetcinema.co.il/films/dune-part-three/8105s2r"
       },
-      "8326s2r": {
-        "featureTitle": "מאבדים שליטה",
-        "url": "https://www.planetcinema.co.il/films/rolling-loud/8326s2r"
-      },
       "8328s2r": {
         "featureTitle": "אין כמו אמא",
         "url": "https://www.planetcinema.co.il/films/other-mommy/8328s2r"
@@ -45,6 +41,10 @@
         "featureTitle": "מפרץ האימה",
         "url": "https://www.planetcinema.co.il/films/the-bay/8505s2r"
       },
+      "1028s2r": {
+        "featureTitle": "עד הקצה",
+        "url": "https://www.planetcinema.co.il/films/the-cut/1028s2r"
+      },
       "8585s2r": {
         "featureTitle": "משא כבד",
         "url": "https://www.planetcinema.co.il/films/the-weight/8585s2r"
@@ -57,10 +57,6 @@
         "featureTitle": "סטריט פייטר",
         "url": "https://www.planetcinema.co.il/films/street-fighter/8182s2r"
       },
-      "8467s2r": {
-        "featureTitle": "עלי ג'י: אני מי?",
-        "url": "https://www.planetcinema.co.il/films/ali-g-who-iz-i/8467s2r"
-      },
       "8222s2r": {
         "featureTitle": "קלייפייס",
         "url": "https://www.planetcinema.co.il/films/clayface/8222s2r"
@@ -72,6 +68,10 @@
       "8577s2r": {
         "featureTitle": "הבדחן",
         "url": "https://www.planetcinema.co.il/films/the-wedding-entertainer-the-tale-of-moishe-badhan/8577s2r"
+      },
+      "8326s2r": {
+        "featureTitle": "מאבדים שליטה",
+        "url": "https://www.planetcinema.co.il/films/rolling-loud/8326s2r"
       },
       "8309s2r": {
         "featureTitle": "איך לשדוד בנק",
@@ -246,10 +246,6 @@
       "8295s2r": {
         "featureTitle": "נקמה בלב ים",
         "url": "https://www.planetcinema.co.il/films/mutiny/8295s2r"
-      },
-      "8352s2r": {
-        "featureTitle": "קיוטי נגד אקמי",
-        "url": "https://www.planetcinema.co.il/films/coyote-vs-acme/8352s2r"
       },
       "8375s2r": {
         "featureTitle": "בחזרה מההימלאיה",
