@@ -123,6 +123,10 @@
       }
     },
     "now-playing": {
+      "8330s2r": {
+        "featureTitle": "החשבון החברתי",
+        "url": "https://www.planetcinema.co.il/films/the-social-reckoning/8330s2r"
+      },
       "8244s2r1": {
         "featureTitle": "ТАЙНЫЙ ДНЕВНИК ВЕРИТИ - Verity",
         "url": "https://www.planetcinema.co.il/films/verity/8244s2r1"
@@ -134,10 +138,6 @@
       "7141s2r": {
         "featureTitle": "גלים של תקווה",
         "url": "https://www.planetcinema.co.il/films/waves/7141s2r"
-      },
-      "8330s2r": {
-        "featureTitle": "החשבון החברתי",
-        "url": "https://www.planetcinema.co.il/films/the-social-reckoning/8330s2r"
       },
       "8576s2r": {
         "featureTitle": "הילדה השמאלית",
@@ -378,7 +378,10 @@
     "group:1072:7460s2r": [
       "2026-10-08",
       "2026-10-09",
-      "2026-10-10"
+      "2026-10-10",
+      "2026-10-11",
+      "2026-10-12",
+      "2026-10-13"
     ]
   },
   "telegram_offset": 429356933,
