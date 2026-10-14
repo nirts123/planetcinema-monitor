@@ -5,14 +5,6 @@
         "featureTitle": "הנוקמים: עלייתו של ד\"ר דום - Infinity Vi",
         "url": "https://www.planetcinema.co.il/films/avengers-doomsday-infinity-vision/7879s2r1"
       },
-      "8030s2r": {
-        "featureTitle": "הסתברות לאהבה",
-        "url": "https://www.planetcinema.co.il/films/underwater-speculations/8030s2r"
-      },
-      "8577s2r": {
-        "featureTitle": "הבדחן",
-        "url": "https://www.planetcinema.co.il/films/the-wedding-entertainer-the-tale-of-moishe-badhan/8577s2r"
-      },
       "8564s2r": {
         "featureTitle": "League of Legends Worlds 26 | Finals in",
         "url": "https://www.planetcinema.co.il/films/league-of-legends-worlds-26-finals-in/8564s2r"
@@ -107,10 +99,6 @@
         "featureTitle": "הסתברות לאהבה - שיח יוצרים",
         "url": "https://www.planetcinema.co.il/films/underwater-speculations/8030s2r1"
       },
-      "8263s2r": {
-        "featureTitle": "תמונות יפואיות 2",
-        "url": "https://www.planetcinema.co.il/films/jaffa-2/8263s2r"
-      },
       "8244s2r2": {
         "featureTitle": "תעתוע – ההקרנה של אילת שמש",
         "url": "https://www.planetcinema.co.il/films/verity/8244s2r2"
@@ -142,26 +130,6 @@
       "8010d2r": {
         "featureTitle": "שון כבשון: מצמרר מצחוק",
         "url": "https://www.planetcinema.co.il/films/shaun-the-sheep-the-beast-of-mossy-bottom/8010d2r"
-      },
-      "8620s2r": {
-        "featureTitle": "לאן",
-        "url": "https://www.planetcinema.co.il/films/where-to/8620s2r"
-      },
-      "8621s2r": {
-        "featureTitle": "לב זהב",
-        "url": "https://www.planetcinema.co.il/films/heart-of-gold/8621s2r"
-      },
-      "8622s2r": {
-        "featureTitle": "מים רבים",
-        "url": "https://www.planetcinema.co.il/films/water/8622s2r"
-      },
-      "8624s2r": {
-        "featureTitle": "פנתר כפול",
-        "url": "https://www.planetcinema.co.il/films/panther/8624s2r"
-      },
-      "8623s2r": {
-        "featureTitle": "שעתיד לבוא",
-        "url": "https://www.planetcinema.co.il/films/what-is-to-come/8623s2r"
       },
       "8244s2r1": {
         "featureTitle": "ТАЙНЫЙ ДНЕВНИК ВЕРИТИ - Verity",
@@ -247,10 +215,6 @@
         "featureTitle": "הנוקמים: סוף המשחק - הדרן",
         "url": "https://www.planetcinema.co.il/films/avengers-endgame-re-release/8469s2r"
       },
-      "8469s2riv": {
-        "featureTitle": "הנוקמים: סוף המשחק - הדרן -  Infinity Vi",
-        "url": "https://www.planetcinema.co.il/films/avengers-endgame-re-release-infinity-vision/8469s2riv"
-      },
       "7685d2r": {
         "featureTitle": "וונדר-דוג",
         "url": "https://www.planetcinema.co.il/films/charlie-the-wonderdog/7685d2r"
@@ -315,10 +279,6 @@
         "featureTitle": "ספיידרמן: יום חדש",
         "url": "https://www.planetcinema.co.il/films/spider-man-brand-new-day/8085s2r"
       },
-      "7601s2r": {
-        "featureTitle": "כי את מכוערת",
-        "url": "https://www.planetcinema.co.il/films/cuz-youre-ugly/7601s2r"
-      },
       "8289s2r": {
         "featureTitle": "תיכון מגשימים",
         "url": "https://www.planetcinema.co.il/films/magshimim/8289s2r"
@@ -327,14 +287,6 @@
         "featureTitle": "האודיסאה",
         "url": "https://www.planetcinema.co.il/films/the-odyssey/7460s2r"
       },
-      "8256s2r": {
-        "featureTitle": "חינה אמריקאית",
-        "url": "https://www.planetcinema.co.il/films/american-hina/8256s2r"
-      },
-      "8262s2r": {
-        "featureTitle": "מאמא",
-        "url": "https://www.planetcinema.co.il/films/mama/8262s2r"
-      },
       "7794s2r": {
         "featureTitle": "מואנה לייב אקשן",
         "url": "https://www.planetcinema.co.il/films/moana-live-action/7794s2r"
@@ -342,10 +294,6 @@
       "8023s2r": {
         "featureTitle": "מיניונים ומפלצות",
         "url": "https://www.planetcinema.co.il/films/minions-monsters/8023s2r"
-      },
-      "7922s2r": {
-        "featureTitle": "שמיים וארץ",
-        "url": "https://www.planetcinema.co.il/films/heaven-and-earth/7922s2r"
       },
       "7578s2r": {
         "featureTitle": "ערך סנטימנטלי",
@@ -362,10 +310,6 @@
       "8134s2r": {
         "featureTitle": "אובססיה",
         "url": "https://www.planetcinema.co.il/films/obsession/8134s2r"
-      },
-      "7967s2r": {
-        "featureTitle": "ברנינג מן",
-        "url": "https://www.planetcinema.co.il/films/burning-man/7967s2r"
       }
     }
   },
@@ -383,7 +327,6 @@
     ],
     "1072:8105s2r": [],
     "private:1072:7460s2r": [
-      "2026-10-14",
       "2026-10-15",
       "2026-10-16",
       "2026-10-17",
@@ -392,9 +335,7 @@
       "2026-10-20",
       "2026-10-21"
     ],
-    "group:1072:7460s2r": [
-      "2026-10-14"
-    ]
+    "group:1072:7460s2r": []
   },
   "telegram_offset": 429356933,
   "last_movie_list": [
