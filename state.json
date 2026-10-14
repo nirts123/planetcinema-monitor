@@ -37,9 +37,17 @@
         "featureTitle": "קלייפייס",
         "url": "https://www.planetcinema.co.il/films/clayface/8222s2r"
       },
+      "8263s2r": {
+        "featureTitle": "תמונות יפואיות 2",
+        "url": "https://www.planetcinema.co.il/films/jaffa-2/8263s2r"
+      },
       "8467s2r": {
         "featureTitle": "עלי ג'י: אני מי?",
         "url": "https://www.planetcinema.co.il/films/ali-g-who-iz-i/8467s2r"
+      },
+      "8030s2r": {
+        "featureTitle": "הסתברות לאהבה",
+        "url": "https://www.planetcinema.co.il/films/underwater-speculations/8030s2r"
       },
       "8609s2r": {
         "featureTitle": "חזרזיר: הלילה האחרון",
@@ -72,6 +80,10 @@
       "8309s2r": {
         "featureTitle": "איך לשדוד בנק",
         "url": "https://www.planetcinema.co.il/films/how-to-rob-a-bank/8309s2r"
+      },
+      "8577s2r": {
+        "featureTitle": "הבדחן",
+        "url": "https://www.planetcinema.co.il/films/the-wedding-entertainer-the-tale-of-moishe-badhan/8577s2r"
       },
       "7803s2r": {
         "featureTitle": "משחקי הרעב: זריחה על האסיף",
