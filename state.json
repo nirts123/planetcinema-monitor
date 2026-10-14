@@ -45,6 +45,10 @@
         "featureTitle": "קלייפייס",
         "url": "https://www.planetcinema.co.il/films/clayface/8222s2r"
       },
+      "8467s2r": {
+        "featureTitle": "עלי ג'י: אני מי?",
+        "url": "https://www.planetcinema.co.il/films/ali-g-who-iz-i/8467s2r"
+      },
       "8609s2r": {
         "featureTitle": "חזרזיר: הלילה האחרון",
         "url": "https://www.planetcinema.co.il/films/piglet/8609s2r"
@@ -61,17 +65,9 @@
         "featureTitle": "מאבדים שליטה",
         "url": "https://www.planetcinema.co.il/films/rolling-loud/8326s2r"
       },
-      "8309s2r": {
-        "featureTitle": "איך לשדוד בנק",
-        "url": "https://www.planetcinema.co.il/films/how-to-rob-a-bank/8309s2r"
-      },
       "8632s2r": {
         "featureTitle": "באטמן (1989)",
         "url": "https://www.planetcinema.co.il/films/batman/8632s2r"
-      },
-      "7803s2r": {
-        "featureTitle": "משחקי הרעב: זריחה על האסיף",
-        "url": "https://www.planetcinema.co.il/films/the-hunger-games-sunrise-on-the-reaping/7803s2r"
       },
       "8631s2r": {
         "featureTitle": "נהג מונית - חגיגות 50 שנה",
@@ -80,6 +76,14 @@
       "8630s2r": {
         "featureTitle": "רוקי - חגיגות 50 שנה",
         "url": "https://www.planetcinema.co.il/films/rocky/8630s2r"
+      },
+      "8309s2r": {
+        "featureTitle": "איך לשדוד בנק",
+        "url": "https://www.planetcinema.co.il/films/how-to-rob-a-bank/8309s2r"
+      },
+      "7803s2r": {
+        "featureTitle": "משחקי הרעב: זריחה על האסיף",
+        "url": "https://www.planetcinema.co.il/films/the-hunger-games-sunrise-on-the-reaping/7803s2r"
       },
       "8181s2r": {
         "featureTitle": "פגוש את הכלה",
@@ -99,10 +103,6 @@
       }
     },
     "now-playing": {
-      "8330s2r": {
-        "featureTitle": "החשבון החברתי",
-        "url": "https://www.planetcinema.co.il/films/the-social-reckoning/8330s2r"
-      },
       "8030s2r1": {
         "featureTitle": "הסתברות לאהבה - שיח יוצרים",
         "url": "https://www.planetcinema.co.il/films/underwater-speculations/8030s2r1"
@@ -174,6 +174,10 @@
       "7141s2r": {
         "featureTitle": "גלים של תקווה",
         "url": "https://www.planetcinema.co.il/films/waves/7141s2r"
+      },
+      "8330s2r": {
+        "featureTitle": "החשבון החברתי",
+        "url": "https://www.planetcinema.co.il/films/the-social-reckoning/8330s2r"
       },
       "8576s2r": {
         "featureTitle": "הילדה השמאלית",
