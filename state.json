@@ -45,6 +45,14 @@
         "featureTitle": "עלי ג'י: אני מי?",
         "url": "https://www.planetcinema.co.il/films/ali-g-who-iz-i/8467s2r"
       },
+      "8667s2r": {
+        "featureTitle": "בעל ההזמנה",
+        "url": "https://www.planetcinema.co.il/films/wicker/8667s2r"
+      },
+      "7917s2r": {
+        "featureTitle": "הזר",
+        "url": "https://www.planetcinema.co.il/films/the-stranger/7917s2r"
+      },
       "8030s2r": {
         "featureTitle": "הסתברות לאהבה",
         "url": "https://www.planetcinema.co.il/films/underwater-speculations/8030s2r"
@@ -64,6 +72,10 @@
       "8326s2r": {
         "featureTitle": "מאבדים שליטה",
         "url": "https://www.planetcinema.co.il/films/rolling-loud/8326s2r"
+      },
+      "7283s2r": {
+        "featureTitle": "פרלה",
+        "url": "https://www.planetcinema.co.il/films/perla/7283s2r"
       },
       "8632s2r": {
         "featureTitle": "באטמן (1989)",
@@ -104,6 +116,10 @@
       "8310s2r": {
         "featureTitle": "עידן הקרח: חם אש",
         "url": "https://www.planetcinema.co.il/films/ice-age-boiling-point/8310s2r"
+      },
+      "8666s2r": {
+        "featureTitle": "נרניה: אחיינו של הקוסם",
+        "url": "https://www.planetcinema.co.il/films/narnia-the-magicians-nephew/8666s2r"
       }
     },
     "now-playing": {
