@@ -17,13 +17,13 @@
         "featureTitle": "רוקי (1976)",
         "url": "https://www.planetcinema.co.il/films/rocky/8630s2r"
       },
-      "8672s2r1": {
-        "featureTitle": "האגר - ארץ - שיח יוצרים",
-        "url": "https://www.planetcinema.co.il/films/hager-land/8672s2r1"
-      },
       "8564s2r": {
         "featureTitle": "League of Legends Worlds 26 | Finals in",
         "url": "https://www.planetcinema.co.il/films/league-of-legends-worlds-26-finals-in/8564s2r"
+      },
+      "8672s2r1": {
+        "featureTitle": "האגר - ארץ - שיח יוצרים",
+        "url": "https://www.planetcinema.co.il/films/hager-land/8672s2r1"
       },
       "8105s2r": {
         "featureTitle": "חולית: חלק שלישי",
@@ -48,6 +48,10 @@
       "8634s2r": {
         "featureTitle": "שם קוד טהרן",
         "url": "https://www.planetcinema.co.il/films/the-fix/8634s2r"
+      },
+      "8679s2r": {
+        "featureTitle": "טוסקה - אופרה בקולנוע",
+        "url": "https://www.planetcinema.co.il/films/tosca/8679s2r"
       },
       "8326s2r": {
         "featureTitle": "מאבדים שליטה",
@@ -81,6 +85,10 @@
         "featureTitle": "משחקי הרעב: זריחה על האסיף",
         "url": "https://www.planetcinema.co.il/films/the-hunger-games-sunrise-on-the-reaping/7803s2r"
       },
+      "8661s2r": {
+        "featureTitle": "You Can See Everything",
+        "url": "https://www.planetcinema.co.il/films/you-can-see-everything/8661s2r"
+      },
       "8181s2r": {
         "featureTitle": "פגוש את הכלה",
         "url": "https://www.planetcinema.co.il/films/focker-in-law/8181s2r"
@@ -111,6 +119,10 @@
         "featureTitle": "RAMMSTEIN - LIVE IN MEXICO CITY",
         "url": "https://www.planetcinema.co.il/films/rammstein-live-in-mexico-city/8559s2r"
       },
+      "8467s2r": {
+        "featureTitle": "עלי ג'י: אני מי?",
+        "url": "https://www.planetcinema.co.il/films/ali-g-who-iz-i/8467s2r"
+      },
       "8030s2r": {
         "featureTitle": "הסתברות לאהבה",
         "url": "https://www.planetcinema.co.il/films/underwater-speculations/8030s2r"
@@ -118,10 +130,6 @@
       "8030s2r1": {
         "featureTitle": "הסתברות לאהבה - שיח יוצרים",
         "url": "https://www.planetcinema.co.il/films/underwater-speculations/8030s2r1"
-      },
-      "8467s2r": {
-        "featureTitle": "עלי ג'י: אני מי?",
-        "url": "https://www.planetcinema.co.il/films/ali-g-who-iz-i/8467s2r"
       },
       "8222s2r1": {
         "featureTitle": "КЛЭЙФЕЙС - Clayface",
