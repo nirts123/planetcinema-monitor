@@ -29,10 +29,6 @@
         "featureTitle": "הזר",
         "url": "https://www.planetcinema.co.il/films/the-stranger/7917s2r"
       },
-      "8609s2r": {
-        "featureTitle": "חזרזיר: הלילה האחרון",
-        "url": "https://www.planetcinema.co.il/films/piglet/8609s2r"
-      },
       "8634s2r": {
         "featureTitle": "שם קוד טהרן",
         "url": "https://www.planetcinema.co.il/films/the-fix/8634s2r"
@@ -130,6 +126,14 @@
       "8030s2r": {
         "featureTitle": "הסתברות לאהבה",
         "url": "https://www.planetcinema.co.il/films/underwater-speculations/8030s2r"
+      },
+      "8609s2r": {
+        "featureTitle": "חזרזיר: הלילה האחרון",
+        "url": "https://www.planetcinema.co.il/films/piglet/8609s2r"
+      },
+      "8222s2r2": {
+        "featureTitle": "קלייפייס - הקרנת סרט + פודקאסט אימת המבק",
+        "url": "https://www.planetcinema.co.il/films/clayface/8222s2r2"
       },
       "8030s2r1": {
         "featureTitle": "הסתברות לאהבה - שיח יוצרים",
