@@ -29,13 +29,17 @@
         "featureTitle": "הזר",
         "url": "https://www.planetcinema.co.il/films/the-stranger/7917s2r"
       },
-      "8634s2r": {
-        "featureTitle": "שם קוד טהרן",
-        "url": "https://www.planetcinema.co.il/films/the-fix/8634s2r"
-      },
       "8679s2r": {
         "featureTitle": "טוסקה - אופרה בקולנוע",
         "url": "https://www.planetcinema.co.il/films/tosca/8679s2r"
+      },
+      "8516s2r": {
+        "featureTitle": "בויאונה: המפלצת מהאמזונס",
+        "url": "https://www.planetcinema.co.il/films/beware-boiuna/8516s2r"
+      },
+      "8690s2r": {
+        "featureTitle": "האישה העשירה בעולם",
+        "url": "https://www.planetcinema.co.il/films/the-richest-woman-in-the-world/8690s2r"
       },
       "8326s2r": {
         "featureTitle": "מאבדים שליטה",
@@ -48,6 +52,10 @@
       "7283s2r": {
         "featureTitle": "פרלה",
         "url": "https://www.planetcinema.co.il/films/perla/7283s2r"
+      },
+      "8382s2r": {
+        "featureTitle": "שרק - חגיגות 25 שנה!",
+        "url": "https://www.planetcinema.co.il/films/shrek/8382s2r"
       },
       "8309s2r": {
         "featureTitle": "איך לשדוד בנק",
@@ -77,9 +85,21 @@
         "featureTitle": "You Can See Everything",
         "url": "https://www.planetcinema.co.il/films/you-can-see-everything/8661s2r"
       },
+      "8297s2r": {
+        "featureTitle": "הקס: עולם מכושף",
+        "url": "https://www.planetcinema.co.il/films/hexed/8297s2r"
+      },
       "8181s2r": {
         "featureTitle": "פגוש את הכלה",
         "url": "https://www.planetcinema.co.il/films/focker-in-law/8181s2r"
+      },
+      "8528s2r": {
+        "featureTitle": "קלאב קיד",
+        "url": "https://www.planetcinema.co.il/films/club-kid/8528s2r"
+      },
+      "8531s2r": {
+        "featureTitle": "אני רוקי",
+        "url": "https://www.planetcinema.co.il/films/i-play-rocky/8531s2r"
       },
       "7482d2r": {
         "featureTitle": "חתול תעלול: הסרט",
@@ -88,6 +108,10 @@
       "8392s2r": {
         "featureTitle": "אנגרי בירדס הסרט 3",
         "url": "https://www.planetcinema.co.il/films/the-angry-birds-movie-3/8392s2r"
+      },
+      "8394s2r": {
+        "featureTitle": "ג׳ומנג׳י: הבריחה הגדולה",
+        "url": "https://www.planetcinema.co.il/films/jumanji-open-world/8394s2r"
       },
       "8414s2r": {
         "featureTitle": "קללת איש הזאב",
@@ -107,9 +131,9 @@
         "featureTitle": "RAMMSTEIN - LIVE IN MEXICO CITY",
         "url": "https://www.planetcinema.co.il/films/rammstein-live-in-mexico-city/8559s2r"
       },
-      "8467s2r": {
-        "featureTitle": "עלי ג'י: אני מי?",
-        "url": "https://www.planetcinema.co.il/films/ali-g-who-iz-i/8467s2r"
+      "8634s2r": {
+        "featureTitle": "שם קוד טהרן",
+        "url": "https://www.planetcinema.co.il/films/the-fix/8634s2r"
       },
       "8632s2r": {
         "featureTitle": "באטמן (1989)",
@@ -138,6 +162,10 @@
       "8030s2r1": {
         "featureTitle": "הסתברות לאהבה - שיח יוצרים",
         "url": "https://www.planetcinema.co.il/films/underwater-speculations/8030s2r1"
+      },
+      "8467s2r": {
+        "featureTitle": "עלי ג'י: אני מי?",
+        "url": "https://www.planetcinema.co.il/films/ali-g-who-iz-i/8467s2r"
       },
       "8222s2r1": {
         "featureTitle": "КЛЭЙФЕЙС - Clayface",
