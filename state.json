@@ -1,10 +1,6 @@
 {
   "feeds": {
     "coming-soon": {
-      "7879s2r1": {
-        "featureTitle": "הנוקמים: עלייתו של ד\"ר דום - Infinity Vi",
-        "url": "https://www.planetcinema.co.il/films/avengers-doomsday-infinity-vision/7879s2r1"
-      },
       "8564s2r": {
         "featureTitle": "League of Legends Worlds 26 | Finals in",
         "url": "https://www.planetcinema.co.il/films/league-of-legends-worlds-26-finals-in/8564s2r"
@@ -21,18 +17,6 @@
         "featureTitle": "הנוקמים: עלייתו של ד\"ר דום",
         "url": "https://www.planetcinema.co.il/films/avengers-doomsday/7879s2r"
       },
-      "8667s2r": {
-        "featureTitle": "בעל בהזמנה",
-        "url": "https://www.planetcinema.co.il/films/wicker/8667s2r"
-      },
-      "7917s2r": {
-        "featureTitle": "הזר",
-        "url": "https://www.planetcinema.co.il/films/the-stranger/7917s2r"
-      },
-      "8679s2r": {
-        "featureTitle": "טוסקה - אופרה בקולנוע",
-        "url": "https://www.planetcinema.co.il/films/tosca/8679s2r"
-      },
       "8516s2r": {
         "featureTitle": "בויאונה: המפלצת מהאמזונס",
         "url": "https://www.planetcinema.co.il/films/beware-boiuna/8516s2r"
@@ -40,10 +24,6 @@
       "8690s2r": {
         "featureTitle": "האישה העשירה בעולם",
         "url": "https://www.planetcinema.co.il/films/the-richest-woman-in-the-world/8690s2r"
-      },
-      "8326s2r": {
-        "featureTitle": "מאבדים שליטה",
-        "url": "https://www.planetcinema.co.il/films/rolling-loud/8326s2r"
       },
       "8161s2r": {
         "featureTitle": "סוס פרא תשע",
@@ -146,6 +126,22 @@
       "8630s2r": {
         "featureTitle": "רוקי (1976)",
         "url": "https://www.planetcinema.co.il/films/rocky/8630s2r"
+      },
+      "8326s2r": {
+        "featureTitle": "מאבדים שליטה",
+        "url": "https://www.planetcinema.co.il/films/rolling-loud/8326s2r"
+      },
+      "8679s2r": {
+        "featureTitle": "טוסקה - אופרה בקולנוע",
+        "url": "https://www.planetcinema.co.il/films/tosca/8679s2r"
+      },
+      "8667s2r": {
+        "featureTitle": "בעל בהזמנה",
+        "url": "https://www.planetcinema.co.il/films/wicker/8667s2r"
+      },
+      "7917s2r": {
+        "featureTitle": "הזר",
+        "url": "https://www.planetcinema.co.il/films/the-stranger/7917s2r"
       },
       "8030s2r": {
         "featureTitle": "הסתברות לאהבה",
@@ -259,6 +255,10 @@
         "featureTitle": "דיגר",
         "url": "https://www.planetcinema.co.il/films/digger/8221s2r"
       },
+      "8354s2r": {
+        "featureTitle": "הגיהנום שבפנים",
+        "url": "https://www.planetcinema.co.il/films/her-private-hell/8354s2r"
+      },
       "8244s2r": {
         "featureTitle": "תעתוע",
         "url": "https://www.planetcinema.co.il/films/verity/8244s2r"
@@ -311,6 +311,10 @@
         "featureTitle": "טד החוקר ומנורת הקסמים",
         "url": "https://www.planetcinema.co.il/films/tad-and-the-magic-lamp/8473d2r"
       },
+      "8051d2r": {
+        "featureTitle": "ילד המדבר",
+        "url": "https://www.planetcinema.co.il/films/the-desert-child/8051d2r"
+      },
       "8474s2i": {
         "featureTitle": "הלקחנים: עולמה הסודי של ארייטי",
         "url": "https://www.planetcinema.co.il/films/the-secret-world-of-arrietty/8474s2i"
@@ -330,6 +334,10 @@
       "7460s2r": {
         "featureTitle": "האודיסאה",
         "url": "https://www.planetcinema.co.il/films/the-odyssey/7460s2r"
+      },
+      "7794s2r": {
+        "featureTitle": "מואנה לייב אקשן",
+        "url": "https://www.planetcinema.co.il/films/moana-live-action/7794s2r"
       },
       "8023s2r": {
         "featureTitle": "מיניונים ומפלצות",
@@ -363,14 +371,24 @@
     ],
     "1072:8105s2r": [],
     "private:1072:7460s2r": [
-      "2026-10-26",
       "2026-10-27",
-      "2026-10-28"
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02",
+      "2026-11-04"
     ],
     "group:1072:7460s2r": [
-      "2026-10-26",
       "2026-10-27",
-      "2026-10-28"
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02",
+      "2026-11-04"
     ]
   },
   "telegram_offset": 429356933,
