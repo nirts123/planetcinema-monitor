@@ -1,10 +1,6 @@
 {
   "feeds": {
     "coming-soon": {
-      "8672s2r1": {
-        "featureTitle": "האגר - ארץ - שיח יוצרים",
-        "url": "https://www.planetcinema.co.il/films/hager-land/8672s2r1"
-      },
       "8105s2r": {
         "featureTitle": "חולית: חלק שלישי",
         "url": "https://www.planetcinema.co.il/films/dune-part-three/8105s2r"
@@ -130,6 +126,10 @@
       "8030s2r": {
         "featureTitle": "הסתברות לאהבה",
         "url": "https://www.planetcinema.co.il/films/underwater-speculations/8030s2r"
+      },
+      "8672s2r1": {
+        "featureTitle": "האגר - ארץ - שיח יוצרים",
+        "url": "https://www.planetcinema.co.il/films/hager-land/8672s2r1"
       },
       "8564s2r": {
         "featureTitle": "League of Legends Worlds 26 | Finals in",
