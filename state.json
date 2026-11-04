@@ -135,14 +135,6 @@
         "featureTitle": "RAMMSTEIN - LIVE IN MEXICO CITY",
         "url": "https://www.planetcinema.co.il/films/rammstein-live-in-mexico-city/8559s2r"
       },
-      "8634s2r": {
-        "featureTitle": "שם קוד טהרן",
-        "url": "https://www.planetcinema.co.il/films/the-fix/8634s2r"
-      },
-      "8030s2r": {
-        "featureTitle": "הסתברות לאהבה",
-        "url": "https://www.planetcinema.co.il/films/underwater-speculations/8030s2r"
-      },
       "8672s2r1": {
         "featureTitle": "האגר - ארץ - שיח יוצרים",
         "url": "https://www.planetcinema.co.il/films/hager-land/8672s2r1"
@@ -154,10 +146,6 @@
       "8655s2r": {
         "featureTitle": "החיה",
         "url": "https://www.planetcinema.co.il/films/the-beast/8655s2r"
-      },
-      "8632s2r": {
-        "featureTitle": "באטמן (1989)",
-        "url": "https://www.planetcinema.co.il/films/batman/8632s2r"
       },
       "8631s2r": {
         "featureTitle": "נהג מונית (1976)",
@@ -203,9 +191,17 @@
         "featureTitle": "הזר",
         "url": "https://www.planetcinema.co.il/films/the-stranger/7917s2r"
       },
+      "8030s2r": {
+        "featureTitle": "הסתברות לאהבה",
+        "url": "https://www.planetcinema.co.il/films/underwater-speculations/8030s2r"
+      },
       "8609s2r": {
         "featureTitle": "חזרזיר: הלילה האחרון",
         "url": "https://www.planetcinema.co.il/films/piglet/8609s2r"
+      },
+      "8634s2r": {
+        "featureTitle": "שם קוד טהרן",
+        "url": "https://www.planetcinema.co.il/films/the-fix/8634s2r"
       },
       "8467s2r": {
         "featureTitle": "עלי ג'י: אני מי?",
