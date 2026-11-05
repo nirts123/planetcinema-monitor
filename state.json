@@ -223,6 +223,10 @@
         "featureTitle": "КЛЭЙФЕЙС - Clayface",
         "url": "https://www.planetcinema.co.il/films/clayface/8222s2r1"
       },
+      "8635s2r": {
+        "featureTitle": "כבשה בקופסה",
+        "url": "https://www.planetcinema.co.il/films/sheep-in-the-box/8635s2r"
+      },
       "8636s2r": {
         "featureTitle": "מתוך אהבה",
         "url": "https://www.planetcinema.co.il/films/out-of-love/8636s2r"
@@ -387,22 +391,22 @@
     ],
     "1072:8105s2r": [],
     "private:1072:7460s2r": [
-      "2026-11-05",
       "2026-11-06",
       "2026-11-07",
       "2026-11-08",
       "2026-11-09",
       "2026-11-10",
-      "2026-11-11"
+      "2026-11-11",
+      "2026-11-12"
     ],
     "group:1072:7460s2r": [
-      "2026-11-05",
       "2026-11-06",
       "2026-11-07",
       "2026-11-08",
       "2026-11-09",
       "2026-11-10",
-      "2026-11-11"
+      "2026-11-11",
+      "2026-11-12"
     ]
   },
   "telegram_offset": 429356933,
