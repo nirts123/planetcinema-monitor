@@ -45,10 +45,6 @@
         "featureTitle": "שיעור באהבה",
         "url": "https://www.planetcinema.co.il/films/love-in-separate-beds/8703s2r"
       },
-      "8721s2r": {
-        "featureTitle": "ЕВГЕНИЙ ОНЕГИН - Eugene Onéguine",
-        "url": "https://www.planetcinema.co.il/films/8721s2r/8721s2r"
-      },
       "8181s2r1": {
         "featureTitle": "ЗНАКОМСТВО С ФАКЕРАМИ: НОВАЯ ГЛАВА - Foc",
         "url": "https://www.planetcinema.co.il/films/focker-in-law/8181s2r1"
@@ -111,6 +107,10 @@
       }
     },
     "now-playing": {
+      "8721s2r": {
+        "featureTitle": "ЕВГЕНИЙ ОНЕГИН - Eugene Onéguine",
+        "url": "https://www.planetcinema.co.il/films/8721s2r/8721s2r"
+      },
       "7803s2r": {
         "featureTitle": "משחקי הרעב: זריחה על האסיף",
         "url": "https://www.planetcinema.co.il/films/the-hunger-games-sunrise-on-the-reaping/7803s2r"
@@ -310,7 +310,7 @@
     }
   },
   "horizon": {
-    "1072": "2026-11-24"
+    "1072": "2026-11-26"
   },
   "watch_seen": {
     "1072:7460s2r": [
