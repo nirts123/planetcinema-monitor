@@ -61,9 +61,33 @@
         "featureTitle": "אני רוקי",
         "url": "https://www.planetcinema.co.il/films/i-play-rocky/8531s2r"
       },
+      "8520s2r": {
+        "featureTitle": "ג'ורג' מייקל: FAITH ההופעה",
+        "url": "https://www.planetcinema.co.il/films/george-michael-the-faith-tour/8520s2r"
+      },
+      "8628d2r": {
+        "featureTitle": "הקסם הצפוני",
+        "url": "https://www.planetcinema.co.il/films/north/8628d2r"
+      },
       "7482d2r": {
         "featureTitle": "חתול תעלול: הסרט",
         "url": "https://www.planetcinema.co.il/films/the-cat-in-the-hat/7482d2r"
+      },
+      "8346s2r": {
+        "featureTitle": "מי מפחד מסנטה? 2",
+        "url": "https://www.planetcinema.co.il/films/violent-night-2/8346s2r"
+      },
+      "8441s2r": {
+        "featureTitle": "עצום!",
+        "url": "https://www.planetcinema.co.il/films/behemoth/8441s2r"
+      },
+      "8430s2r": {
+        "featureTitle": "שבורות",
+        "url": "https://www.planetcinema.co.il/films/the-wrong-girls/8430s2r"
+      },
+      "8730s2r": {
+        "featureTitle": "שטח אש",
+        "url": "https://www.planetcinema.co.il/films/brothers-under-fire/8730s2r"
       },
       "8723s2r": {
         "featureTitle": "על המפה 77:78 + פאנל עם טל ברודי",
@@ -88,6 +112,14 @@
       "8666s2r": {
         "featureTitle": "נרניה: אחיינו של הקוסם",
         "url": "https://www.planetcinema.co.il/films/narnia-the-magicians-nephew/8666s2r"
+      },
+      "8524s2r": {
+        "featureTitle": "מינוטאור",
+        "url": "https://www.planetcinema.co.il/films/minotaur/8524s2r"
+      },
+      "8246s2r": {
+        "featureTitle": "פיורד",
+        "url": "https://www.planetcinema.co.il/films/fjord/8246s2r"
       }
     },
     "now-playing": {
