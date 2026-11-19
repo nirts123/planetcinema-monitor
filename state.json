@@ -53,10 +53,6 @@
         "featureTitle": "חליל הקסם - אופרה בקולנוע",
         "url": "https://www.planetcinema.co.il/films/die-zauberflote/8722s2r"
       },
-      "8559s2r1": {
-        "featureTitle": "RAMMSTEIN - LIVE IN MEXICO CITY- RU",
-        "url": "https://www.planetcinema.co.il/films/rammstein-live-in-mexico-city-ru/8559s2r1"
-      },
       "8531s2r": {
         "featureTitle": "אני רוקי",
         "url": "https://www.planetcinema.co.il/films/i-play-rocky/8531s2r"
@@ -123,6 +119,10 @@
       }
     },
     "now-playing": {
+      "8559s2r1": {
+        "featureTitle": "RAMMSTEIN - LIVE IN MEXICO CITY- RU",
+        "url": "https://www.planetcinema.co.il/films/rammstein-live-in-mexico-city-ru/8559s2r1"
+      },
       "8721s2r": {
         "featureTitle": "ЕВГЕНИЙ ОНЕГИН - Eugene Onéguine",
         "url": "https://www.planetcinema.co.il/films/8721s2r/8721s2r"
