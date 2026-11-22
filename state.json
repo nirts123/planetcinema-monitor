@@ -203,10 +203,6 @@
         "featureTitle": "ראמאיאנה: אגדה עולה",
         "url": "https://www.planetcinema.co.il/films/ramayana-rise-of-a-legend/8566s2r"
       },
-      "8516s2r": {
-        "featureTitle": "בויאונה: המפלצת מהאמזונס",
-        "url": "https://www.planetcinema.co.il/films/beware-boiuna/8516s2r"
-      },
       "8690s2r": {
         "featureTitle": "האישה העשירה בעולם",
         "url": "https://www.planetcinema.co.il/films/the-richest-woman-in-the-world/8690s2r"
@@ -243,10 +239,6 @@
         "featureTitle": "הסתברות לאהבה",
         "url": "https://www.planetcinema.co.il/films/underwater-speculations/8030s2r"
       },
-      "8609s2r": {
-        "featureTitle": "חזרזיר: הלילה האחרון",
-        "url": "https://www.planetcinema.co.il/films/piglet/8609s2r"
-      },
       "8634s2r": {
         "featureTitle": "שם קוד טהרן",
         "url": "https://www.planetcinema.co.il/films/the-fix/8634s2r"
@@ -282,10 +274,6 @@
       "8010d2r": {
         "featureTitle": "שון כבשון: מצמרר מצחוק",
         "url": "https://www.planetcinema.co.il/films/shaun-the-sheep-the-beast-of-mossy-bottom/8010d2r"
-      },
-      "8328s2r": {
-        "featureTitle": "אין כמו אמא",
-        "url": "https://www.planetcinema.co.il/films/other-mommy/8328s2r"
       },
       "8105s2r1": {
         "featureTitle": "חולית: חלק שלישי - הרצאה ברוסית",
@@ -346,7 +334,7 @@
     }
   },
   "horizon": {
-    "1072": "2026-12-11"
+    "1072": "2026-12-12"
   },
   "watch_seen": {
     "1072:7460s2r": [
