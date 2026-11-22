@@ -49,17 +49,9 @@
         "featureTitle": "שעתיד לבוא",
         "url": "https://www.planetcinema.co.il/films/what-is-to-come/8623s2r"
       },
-      "8722s2r": {
-        "featureTitle": "חליל הקסם - אופרה בקולנוע",
-        "url": "https://www.planetcinema.co.il/films/die-zauberflote/8722s2r"
-      },
       "8531s2r": {
         "featureTitle": "אני רוקי",
         "url": "https://www.planetcinema.co.il/films/i-play-rocky/8531s2r"
-      },
-      "8520s2r": {
-        "featureTitle": "ג'ורג' מייקל: FAITH ההופעה",
-        "url": "https://www.planetcinema.co.il/films/george-michael-the-faith-tour/8520s2r"
       },
       "8628d2r": {
         "featureTitle": "הקסם הצפוני",
@@ -88,6 +80,10 @@
       "8723s2r": {
         "featureTitle": "על המפה 77:78 + פאנל עם טל ברודי",
         "url": "https://www.planetcinema.co.il/films/on-the-map/8723s2r"
+      },
+      "8624s2r": {
+        "featureTitle": "פנתר כפול",
+        "url": "https://www.planetcinema.co.il/films/panther/8624s2r"
       },
       "8392s2r": {
         "featureTitle": "אנגרי בירדס הסרט 3",
@@ -130,6 +126,10 @@
       "8559s2r1": {
         "featureTitle": "RAMMSTEIN - LIVE IN MEXICO CITY- RU",
         "url": "https://www.planetcinema.co.il/films/rammstein-live-in-mexico-city-ru/8559s2r1"
+      },
+      "8520s2r": {
+        "featureTitle": "ג'ורג' מייקל: FAITH ההופעה",
+        "url": "https://www.planetcinema.co.il/films/george-michael-the-faith-tour/8520s2r"
       },
       "8721s2r": {
         "featureTitle": "ЕВГЕНИЙ ОНЕГИН - Eugene Onéguine",
