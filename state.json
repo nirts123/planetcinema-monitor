@@ -17,6 +17,112 @@
         "featureTitle": "הנוקמים: עלייתו של ד\"ר דום",
         "url": "https://www.planetcinema.co.il/films/avengers-doomsday/7879s2r"
       },
+      "8746s2r": {
+        "featureTitle": "אליז תחת השפעה",
+        "url": "https://www.planetcinema.co.il/films/vanishing-goats/8746s2r"
+      },
+      "8531s2r": {
+        "featureTitle": "אני רוקי",
+        "url": "https://www.planetcinema.co.il/films/i-play-rocky/8531s2r"
+      },
+      "8628d2r": {
+        "featureTitle": "הקסם הצפוני",
+        "url": "https://www.planetcinema.co.il/films/north/8628d2r"
+      },
+      "7739d2r": {
+        "featureTitle": "הקרב על הבית",
+        "url": "https://www.planetcinema.co.il/films/a-mouse-hunt-for-christmas/7739d2r"
+      },
+      "7482d2r": {
+        "featureTitle": "חתול תעלול: הסרט",
+        "url": "https://www.planetcinema.co.il/films/the-cat-in-the-hat/7482d2r"
+      },
+      "8346s2r": {
+        "featureTitle": "מי מפחד מסנטה? 2",
+        "url": "https://www.planetcinema.co.il/films/violent-night-2/8346s2r"
+      },
+      "8441s2r": {
+        "featureTitle": "עצום!",
+        "url": "https://www.planetcinema.co.il/films/behemoth/8441s2r"
+      },
+      "8430s2r": {
+        "featureTitle": "שבורות",
+        "url": "https://www.planetcinema.co.il/films/the-wrong-girls/8430s2r"
+      },
+      "7310d2r": {
+        "featureTitle": "שועל וארנבת מצילים את היער",
+        "url": "https://www.planetcinema.co.il/films/fox-and-hare-save-the-forest/7310d2r"
+      },
+      "8730s2r": {
+        "featureTitle": "שטח אש",
+        "url": "https://www.planetcinema.co.il/films/brothers-under-fire/8730s2r"
+      },
+      "8723s2r": {
+        "featureTitle": "על המפה 77:78 + פאנל עם טל ברודי",
+        "url": "https://www.planetcinema.co.il/films/on-the-map/8723s2r"
+      },
+      "8624s2r": {
+        "featureTitle": "פנתר כפול",
+        "url": "https://www.planetcinema.co.il/films/panther/8624s2r"
+      },
+      "8392s2r": {
+        "featureTitle": "אנגרי בירדס הסרט 3",
+        "url": "https://www.planetcinema.co.il/films/the-angry-birds-movie-3/8392s2r"
+      },
+      "8394s2r": {
+        "featureTitle": "ג׳ומנג׳י: הבריחה הגדולה",
+        "url": "https://www.planetcinema.co.il/films/jumanji-open-world/8394s2r"
+      },
+      "8594s2r": {
+        "featureTitle": "הכייס האחרון בניו יורק",
+        "url": "https://www.planetcinema.co.il/films/the-only-living-pickpocket-in-new-york/8594s2r"
+      },
+      "8414s2r": {
+        "featureTitle": "קללת איש הזאב",
+        "url": "https://www.planetcinema.co.il/films/werwulf/8414s2r"
+      },
+      "8310s2r": {
+        "featureTitle": "עידן הקרח: חם אש",
+        "url": "https://www.planetcinema.co.il/films/ice-age-boiling-point/8310s2r"
+      },
+      "8666s2r": {
+        "featureTitle": "נרניה: אחיינו של הקוסם",
+        "url": "https://www.planetcinema.co.il/films/narnia-the-magicians-nephew/8666s2r"
+      },
+      "8747s2r": {
+        "featureTitle": "מלחמת הכוכבים - חגיגות 50 שנה",
+        "url": "https://www.planetcinema.co.il/films/star-wars-50-annniversary/8747s2r"
+      },
+      "8524s2r": {
+        "featureTitle": "מינוטאור",
+        "url": "https://www.planetcinema.co.il/films/minotaur/8524s2r"
+      },
+      "8246s2r": {
+        "featureTitle": "פיורד",
+        "url": "https://www.planetcinema.co.il/films/fjord/8246s2r"
+      }
+    },
+    "now-playing": {
+      "7803s2r": {
+        "featureTitle": "משחקי הרעב: זריחה על האסיף",
+        "url": "https://www.planetcinema.co.il/films/the-hunger-games-sunrise-on-the-reaping/7803s2r"
+      },
+      "8620s2r": {
+        "featureTitle": "לאן",
+        "url": "https://www.planetcinema.co.il/films/where-to/8620s2r"
+      },
+      "8559s2r1": {
+        "featureTitle": "RAMMSTEIN - LIVE IN MEXICO CITY- RU",
+        "url": "https://www.planetcinema.co.il/films/rammstein-live-in-mexico-city-ru/8559s2r1"
+      },
+      "8520s2r": {
+        "featureTitle": "ג'ורג' מייקל: FAITH ההופעה",
+        "url": "https://www.planetcinema.co.il/films/george-michael-the-faith-tour/8520s2r"
+      },
+      "8721s2r": {
+        "featureTitle": "ЕВГЕНИЙ ОНЕГИН - Eugene Onéguine",
+        "url": "https://www.planetcinema.co.il/films/8721s2r/8721s2r"
+      },
       "8181s2r1": {
         "featureTitle": "ЗНАКОМСТВО С ФАКЕРАМИ: НОВАЯ ГЛАВА - Foc",
         "url": "https://www.planetcinema.co.il/films/focker-in-law/8181s2r1"
@@ -48,92 +154,6 @@
       "8623s2r": {
         "featureTitle": "שעתיד לבוא",
         "url": "https://www.planetcinema.co.il/films/what-is-to-come/8623s2r"
-      },
-      "8531s2r": {
-        "featureTitle": "אני רוקי",
-        "url": "https://www.planetcinema.co.il/films/i-play-rocky/8531s2r"
-      },
-      "8628d2r": {
-        "featureTitle": "הקסם הצפוני",
-        "url": "https://www.planetcinema.co.il/films/north/8628d2r"
-      },
-      "7482d2r": {
-        "featureTitle": "חתול תעלול: הסרט",
-        "url": "https://www.planetcinema.co.il/films/the-cat-in-the-hat/7482d2r"
-      },
-      "8346s2r": {
-        "featureTitle": "מי מפחד מסנטה? 2",
-        "url": "https://www.planetcinema.co.il/films/violent-night-2/8346s2r"
-      },
-      "8441s2r": {
-        "featureTitle": "עצום!",
-        "url": "https://www.planetcinema.co.il/films/behemoth/8441s2r"
-      },
-      "8430s2r": {
-        "featureTitle": "שבורות",
-        "url": "https://www.planetcinema.co.il/films/the-wrong-girls/8430s2r"
-      },
-      "8730s2r": {
-        "featureTitle": "שטח אש",
-        "url": "https://www.planetcinema.co.il/films/brothers-under-fire/8730s2r"
-      },
-      "8723s2r": {
-        "featureTitle": "על המפה 77:78 + פאנל עם טל ברודי",
-        "url": "https://www.planetcinema.co.il/films/on-the-map/8723s2r"
-      },
-      "8624s2r": {
-        "featureTitle": "פנתר כפול",
-        "url": "https://www.planetcinema.co.il/films/panther/8624s2r"
-      },
-      "8392s2r": {
-        "featureTitle": "אנגרי בירדס הסרט 3",
-        "url": "https://www.planetcinema.co.il/films/the-angry-birds-movie-3/8392s2r"
-      },
-      "8394s2r": {
-        "featureTitle": "ג׳ומנג׳י: הבריחה הגדולה",
-        "url": "https://www.planetcinema.co.il/films/jumanji-open-world/8394s2r"
-      },
-      "8414s2r": {
-        "featureTitle": "קללת איש הזאב",
-        "url": "https://www.planetcinema.co.il/films/werwulf/8414s2r"
-      },
-      "8310s2r": {
-        "featureTitle": "עידן הקרח: חם אש",
-        "url": "https://www.planetcinema.co.il/films/ice-age-boiling-point/8310s2r"
-      },
-      "8666s2r": {
-        "featureTitle": "נרניה: אחיינו של הקוסם",
-        "url": "https://www.planetcinema.co.il/films/narnia-the-magicians-nephew/8666s2r"
-      },
-      "8524s2r": {
-        "featureTitle": "מינוטאור",
-        "url": "https://www.planetcinema.co.il/films/minotaur/8524s2r"
-      },
-      "8246s2r": {
-        "featureTitle": "פיורד",
-        "url": "https://www.planetcinema.co.il/films/fjord/8246s2r"
-      }
-    },
-    "now-playing": {
-      "7803s2r": {
-        "featureTitle": "משחקי הרעב: זריחה על האסיף",
-        "url": "https://www.planetcinema.co.il/films/the-hunger-games-sunrise-on-the-reaping/7803s2r"
-      },
-      "8620s2r": {
-        "featureTitle": "לאן",
-        "url": "https://www.planetcinema.co.il/films/where-to/8620s2r"
-      },
-      "8559s2r1": {
-        "featureTitle": "RAMMSTEIN - LIVE IN MEXICO CITY- RU",
-        "url": "https://www.planetcinema.co.il/films/rammstein-live-in-mexico-city-ru/8559s2r1"
-      },
-      "8520s2r": {
-        "featureTitle": "ג'ורג' מייקל: FAITH ההופעה",
-        "url": "https://www.planetcinema.co.il/films/george-michael-the-faith-tour/8520s2r"
-      },
-      "8721s2r": {
-        "featureTitle": "ЕВГЕНИЙ ОНЕГИН - Eugene Onéguine",
-        "url": "https://www.planetcinema.co.il/films/8721s2r/8721s2r"
       },
       "8309s2r1": {
         "featureTitle": "КАК ОГРАБИТЬ БАНК - How to Rob a Bank",
@@ -275,6 +295,10 @@
         "featureTitle": "שון כבשון: מצמרר מצחוק",
         "url": "https://www.planetcinema.co.il/films/shaun-the-sheep-the-beast-of-mossy-bottom/8010d2r"
       },
+      "8244s2r1": {
+        "featureTitle": "ТАЙНЫЙ ДНЕВНИК ВЕРИТИ - Verity",
+        "url": "https://www.planetcinema.co.il/films/verity/8244s2r1"
+      },
       "8105s2r1": {
         "featureTitle": "חולית: חלק שלישי - הרצאה ברוסית",
         "url": "https://www.planetcinema.co.il/films/dune-part-three-ru/8105s2r1"
@@ -286,6 +310,10 @@
       "8485s2r1": {
         "featureTitle": "Heart of the Beast - СЕРДЦЕ ЗВЕРЯ",
         "url": "https://www.planetcinema.co.il/films/heart-of-the-beast-/8485s2r1"
+      },
+      "8484s2r": {
+        "featureTitle": "אספן המשאלות",
+        "url": "https://www.planetcinema.co.il/films/land-of-someitmes/8484s2r"
       },
       "8551s2r": {
         "featureTitle": "בחורים טובים 3",
@@ -311,6 +339,10 @@
         "featureTitle": "טד החוקר ומנורת הקסמים",
         "url": "https://www.planetcinema.co.il/films/tad-and-the-magic-lamp/8473d2r"
       },
+      "8051d2r": {
+        "featureTitle": "ילד המדבר",
+        "url": "https://www.planetcinema.co.il/films/the-desert-child/8051d2r"
+      },
       "8402s2r": {
         "featureTitle": "עצמאות",
         "url": "https://www.planetcinema.co.il/films/tell-me-everything/8402s2r"
@@ -318,6 +350,14 @@
       "7942d2r": {
         "featureTitle": "דג ושמו באסה",
         "url": "https://www.planetcinema.co.il/films/the-pout-pout-fish/7942d2r"
+      },
+      "8093d2r": {
+        "featureTitle": "מפרץ ההרפתקאות: אי הדינוזאורים",
+        "url": "https://www.planetcinema.co.il/films/paw-patrol-the-dino-movie/8093d2r"
+      },
+      "8085s2r": {
+        "featureTitle": "ספיידרמן: יום חדש",
+        "url": "https://www.planetcinema.co.il/films/spider-man-brand-new-day/8085s2r"
       },
       "7460s2r": {
         "featureTitle": "האודיסאה",
@@ -327,9 +367,17 @@
         "featureTitle": "מיניונים ומפלצות",
         "url": "https://www.planetcinema.co.il/films/minions-monsters/8023s2r"
       },
+      "7784s2r": {
+        "featureTitle": "צעצוע של סיפור 5",
+        "url": "https://www.planetcinema.co.il/films/toy-story-5/7784s2r"
+      },
       "8232s2r": {
         "featureTitle": "קופה ראשית",
         "url": "https://www.planetcinema.co.il/films/kupa-rashit/8232s2r"
+      },
+      "5504d2r": {
+        "featureTitle": "פיניק המפלצת הירוקה שלי",
+        "url": "https://www.planetcinema.co.il/films/finnik/5504d2r"
       }
     }
   },
@@ -346,7 +394,14 @@
       "2026-09-16"
     ],
     "1072:8105s2r": [],
-    "private:1072:7460s2r": [],
+    "private:1072:7460s2r": [
+      "2026-11-26",
+      "2026-11-27",
+      "2026-11-28",
+      "2026-11-29",
+      "2026-11-30",
+      "2026-12-02"
+    ],
     "group:1072:7460s2r": []
   },
   "telegram_offset": 429356933,
