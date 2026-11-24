@@ -1,14 +1,6 @@
 {
   "feeds": {
     "coming-soon": {
-      "6348s2r": {
-        "featureTitle": "חולית: חלק ראשון",
-        "url": "https://www.planetcinema.co.il/films/dune-1/6348s2r"
-      },
-      "8640s2r": {
-        "featureTitle": "חולית: חלק שני",
-        "url": "https://www.planetcinema.co.il/films/dune-2/8640s2r"
-      },
       "8105s2r": {
         "featureTitle": "חולית: חלק שלישי",
         "url": "https://www.planetcinema.co.il/films/dune-part-three/8105s2r"
@@ -110,6 +102,14 @@
       "8620s2r": {
         "featureTitle": "לאן",
         "url": "https://www.planetcinema.co.il/films/where-to/8620s2r"
+      },
+      "6348s2r": {
+        "featureTitle": "חולית: חלק ראשון",
+        "url": "https://www.planetcinema.co.il/films/dune-1/6348s2r"
+      },
+      "8640s2r": {
+        "featureTitle": "חולית: חלק שני",
+        "url": "https://www.planetcinema.co.il/films/dune-2/8640s2r"
       },
       "8559s2r1": {
         "featureTitle": "RAMMSTEIN - LIVE IN MEXICO CITY- RU",
@@ -400,6 +400,7 @@
       "2026-11-28",
       "2026-11-29",
       "2026-11-30",
+      "2026-12-01",
       "2026-12-02"
     ],
     "group:1072:7460s2r": []
