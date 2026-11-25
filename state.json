@@ -95,13 +95,17 @@
       }
     },
     "now-playing": {
-      "7803s2r": {
-        "featureTitle": "משחקי הרעב: זריחה על האסיף",
-        "url": "https://www.planetcinema.co.il/films/the-hunger-games-sunrise-on-the-reaping/7803s2r"
+      "8661s2r": {
+        "featureTitle": "לראות את הכל",
+        "url": "https://www.planetcinema.co.il/films/you-can-see-everything/8661s2r"
       },
-      "8620s2r": {
-        "featureTitle": "לאן",
-        "url": "https://www.planetcinema.co.il/films/where-to/8620s2r"
+      "8528s2r": {
+        "featureTitle": "קלאב קיד",
+        "url": "https://www.planetcinema.co.il/films/club-kid/8528s2r"
+      },
+      "8181s2r": {
+        "featureTitle": "פגוש את הכלה",
+        "url": "https://www.planetcinema.co.il/films/focker-in-law/8181s2r"
       },
       "6348s2r": {
         "featureTitle": "חולית: חלק ראשון",
@@ -131,10 +135,6 @@
         "featureTitle": "הקס: עולם מכושף",
         "url": "https://www.planetcinema.co.il/films/hexed/8297s2r"
       },
-      "8661s2r": {
-        "featureTitle": "לראות את הכל",
-        "url": "https://www.planetcinema.co.il/films/you-can-see-everything/8661s2r"
-      },
       "8534s2r": {
         "featureTitle": "נמר של נייר",
         "url": "https://www.planetcinema.co.il/films/paper-tiger/8534s2r"
@@ -142,14 +142,6 @@
       "8704s2r": {
         "featureTitle": "נעלמת ללא עקבות",
         "url": "https://www.planetcinema.co.il/films/protector/8704s2r"
-      },
-      "8181s2r": {
-        "featureTitle": "פגוש את הכלה",
-        "url": "https://www.planetcinema.co.il/films/focker-in-law/8181s2r"
-      },
-      "8528s2r": {
-        "featureTitle": "קלאב קיד",
-        "url": "https://www.planetcinema.co.il/films/club-kid/8528s2r"
       },
       "8623s2r": {
         "featureTitle": "שעתיד לבוא",
@@ -170,6 +162,14 @@
       "8380s2r": {
         "featureTitle": "וושינגטון הצעיר",
         "url": "https://www.planetcinema.co.il/films/young-washington/8380s2r"
+      },
+      "8620s2r": {
+        "featureTitle": "לאן",
+        "url": "https://www.planetcinema.co.il/films/where-to/8620s2r"
+      },
+      "7803s2r": {
+        "featureTitle": "משחקי הרעב: זריחה על האסיף",
+        "url": "https://www.planetcinema.co.il/films/the-hunger-games-sunrise-on-the-reaping/7803s2r"
       },
       "8702d2r": {
         "featureTitle": "סודות פארק הדינוזאורים",
