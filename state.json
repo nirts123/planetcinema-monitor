@@ -227,10 +227,6 @@
         "featureTitle": "האישה העשירה בעולם",
         "url": "https://www.planetcinema.co.il/films/the-richest-woman-in-the-world/8690s2r"
       },
-      "8326s2r": {
-        "featureTitle": "מאבדים שליטה",
-        "url": "https://www.planetcinema.co.il/films/rolling-loud/8326s2r"
-      },
       "8161s2r": {
         "featureTitle": "סוס פרא תשע",
         "url": "https://www.planetcinema.co.il/films/wild-horse-nine/8161s2r"
@@ -282,10 +278,6 @@
       "8105s2r1": {
         "featureTitle": "חולית: חלק שלישי - הרצאה ברוסית",
         "url": "https://www.planetcinema.co.il/films/dune-part-three-ru/8105s2r1"
-      },
-      "8244s2r": {
-        "featureTitle": "תעתוע",
-        "url": "https://www.planetcinema.co.il/films/verity/8244s2r"
       },
       "8485s2r1": {
         "featureTitle": "Heart of the Beast - СЕРДЦЕ ЗВЕРЯ",
@@ -358,7 +350,7 @@
     }
   },
   "horizon": {
-    "1072": "2026-12-15"
+    "1072": "2026-12-16"
   },
   "watch_seen": {
     "1072:7460s2r": [
